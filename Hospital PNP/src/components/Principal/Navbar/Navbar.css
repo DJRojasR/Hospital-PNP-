@@ -1,0 +1,275 @@
+/* ============================= */
+/*          NAVBAR BASE          */
+/* ============================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 8%;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky; /* se queda fijo arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;    /* encima de todo el contenido */
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================= */
+/*            LOGO               */
+/* ============================= */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-png {
+  width: 55px;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.logo-png:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/*            TÍTULO             */
+/* ============================= */
+
+.navbar-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title-main {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.navbar-title-sub {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.2;
+}
+
+/* ============================= */
+/*          MENU NAV             */
+/* ============================= */
+
+.menu .lista {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+/* estilos compartidos para links y spans (NOSOTROS usa span porque no navega directamente) */
+.menu .lista li a,
+.menu .lista li > span {
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+  position: relative;
+  cursor: pointer;
+}
+
+/* underline animado que aparece al hacer hover */
+.menu .lista li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent);
+  left: 0;
+  bottom: -5px;
+  transition: width var(--transition);
+  border-radius: 9999px;
+}
+
+.menu .lista li a:hover,
+.menu .lista li > span:hover {
+  color: var(--color-accent);
+}
+
+.menu .lista li a:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
+/*          DROPDOWN             */
+/* ============================= */
+
+/* el li padre necesita position relative para que el dropdown se posicione debajo de él */
+.has-dropdown {
+  position: relative;
+}
+
+/* flecha ▾ que rota cuando el dropdown está abierto */
+.arrow {
+  margin-left: 4px;
+  font-size: 11px;
+  display: inline-block; /* importante: inline para que no rompa la línea */
+  transition: transform var(--transition);
+}
+
+/* en desktop la flecha rota al hacer hover */
+.has-dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* dropdown oculto por defecto en desktop — se muestra con hover */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  list-style: none;
+  min-width: 180px;
+  overflow: hidden;
+
+  /* truco de visibilidad: opacity + visibility permite animar la entrada/salida */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+/* se muestra al pasar el mouse por el li padre */
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: background var(--transition), color var(--transition);
+}
+
+/* quitamos el underline animado dentro del dropdown */
+.dropdown li a::after {
+  display: none;
+}
+
+.dropdown li a:hover {
+  background-color: var(--color-bg);
+  color: var(--color-accent);
+}
+
+/* ============================= */
+/*        HAMBURGER BUTTON       */
+/* ============================= */
+
+/* oculto en desktop, visible solo en móvil */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 4px;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* mostramos el botón hamburguesa */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ocultamos el subtítulo para ahorrar espacio */
+  .navbar-title-sub {
+    display: none;
+  }
+
+  /* menú oculto por defecto — se muestra al agregar clase .open desde React */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    padding: 16px 0;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  /* lista vertical en móvil */
+  .menu .lista {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 8%;
+  }
+
+  /* cada item ocupa toda la línea — solo afecta links y spans directos del li, NO la flecha */
+  .menu .lista li > a,
+  .menu .lista li > span {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* quitamos el underline animado en móvil */
+  .menu .lista li a::after {
+    display: none;
+  }
+
+  /* en móvil el dropdown no usa opacity/visibility sino display para evitar conflictos con hover */
+  .dropdown {
+    display: none;
+    position: static;   /* deja de ser absoluto y fluye dentro del li */
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding-left: 16px;
+  }
+
+  /* se abre al hacer click — React agrega la clase .open */
+  .dropdown.open {
+    display: block;
+  }
+
+  .dropdown li a {
+    padding: 10px 0;
+    font-size: var(--text-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* en móvil la flecha rota con clase .open que agrega React */
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+}
