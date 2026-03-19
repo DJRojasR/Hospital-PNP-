@@ -1,0 +1,42 @@
+/* ============================= */
+/*          FOOTER BASE          */
+/* ============================= */
+
+.footer {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: var(--space-6) 8%;
+  margin-top: auto; /* empuja el footer al fondo si el contenido es corto */
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* separador entre el nombre y el resto del texto */
+.footer-separator {
+  margin: 0 var(--space-2);
+  opacity: 0.6;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: var(--text-xs);
+  }
+}
