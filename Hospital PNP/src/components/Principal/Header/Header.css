@@ -1,0 +1,135 @@
+/* ============================= */
+/*          HEADER BASE          */
+/* ============================= */
+
+.header {
+  width: 100%;
+  padding: var(--space-12) 8%;
+  background-color: var(--color-bg);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* ============================= */
+/*       LADO IZQUIERDO          */
+/* ============================= */
+
+.header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header-title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+/* resalta el nombre entre comillas */
+.header-title span {
+  color: var(--color-accent);
+}
+
+.header-description {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ============================= */
+/*         DATOS CONTACTO        */
+/* ============================= */
+
+.header-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header-contact li {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+/* etiqueta en negrita antes del dato */
+.contact-label {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-right: var(--space-2);
+}
+
+/* ============================= */
+/*            MAPA               */
+/* ============================= */
+
+.header-map {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden; /* el border-radius se aplica al iframe */
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.header-map iframe {
+  width: 100%;
+  height: 220px;
+  display: block; /* elimina el espacio extra debajo del iframe */
+}
+
+/* ============================= */
+/*       LADO DERECHO (IMAGEN)   */
+/* ============================= */
+
+.header-image-wrapper {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.header-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover; /* recorta la imagen para que llene el espacio sin deformarse */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.header-image:hover {
+  transform: scale(1.03);
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+  /* en móvil se apilan verticalmente — imagen arriba, info abajo */
+  .header-container {
+    flex-direction: column-reverse;
+    gap: var(--space-8);
+  }
+
+  .header-title {
+    font-size: var(--text-2xl);
+  }
+
+  .header-image {
+    height: 260px;
+  }
+
+  .header-map iframe {
+    height: 180px;
+  }
+}
