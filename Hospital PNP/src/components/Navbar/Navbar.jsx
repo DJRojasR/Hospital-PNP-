@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
-import logo from '../../../assets/logo.png'
+import logo from '../../assets/logo.png'
 import { motion } from 'framer-motion'
 import './Navbar.css'
 
