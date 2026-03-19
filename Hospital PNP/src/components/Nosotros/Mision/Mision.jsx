@@ -22,8 +22,8 @@ const Mision = () => {
 
   
   return (
-    <>
-    <section className="mv-section">
+    <div className="mv-page">
+      <section className="mv-section">
       <div className="mv-container">
  
         {/* Encabezado de sección */}
@@ -97,7 +97,7 @@ const Mision = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default Mision
