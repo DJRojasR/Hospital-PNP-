@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Principal/Navbar/Navbar.jsx'
-import Header from './components/Principal/Header/Header.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import Principal from './pages/Principal.jsx'
 import './App.css'
 // importa los componentes que vayas creando
 // import MisionVision from './components/Nosotros/MisionVision.jsx'
@@ -10,12 +10,13 @@ const App = () => {
   return (
     <div className="app">
       <Navbar />
+
       <Routes>
         {/* ruta raíz — página de inicio */}
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<Principal  />} />
 
         {/* /principal también muestra el Header */}
-        <Route path="/principal" element={<Header />} />
+        <Route path="/principal" element={<Principal />} />
 
         {/* estas las descomenta cuando crees los componentes */}
         {/* <Route path="/nosotros" element={<MisionVision />} /> */}
@@ -30,5 +31,6 @@ const App = () => {
     </div>
   )
 }
+
 
 export default App
