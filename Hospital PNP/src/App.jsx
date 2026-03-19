@@ -3,8 +3,9 @@ import Navbar from './components/Principal/Navbar/Navbar.jsx'
 import Header from './components/Principal/Header/Header.jsx'
 import './App.css'
 // importa los componentes que vayas creando
-// import MisionVision from './components/Nosotros/MisionVision.jsx'
-// import CuadroDeHonor from './components/Nosotros/CuadroDeHonor.jsx'
+import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx'
+import Mision from './components/Nosotros/Mision/Mision.jsx'
+
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
         <Route path="/principal" element={<Header />} />
 
         {/* estas las descomenta cuando crees los componentes */}
-        {/* <Route path="/nosotros" element={<MisionVision />} /> */}
-        {/* <Route path="/cuadro-de-honor" element={<CuadroDeHonor />} /> */}
+        <Route path="/nosotros" element={<Mision />} />
+        <Route path="/cuadro-de-honor" element={<CuadroDeHonor />} />
         {/* <Route path="/servicios" element={<Servicios />} /> */}
         {/* <Route path="/atencion" element={<Atencion />} /> */}
         {/* <Route path="/noticias" element={<Noticias />} /> */}
