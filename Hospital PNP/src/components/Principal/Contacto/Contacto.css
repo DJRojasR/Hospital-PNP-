@@ -30,7 +30,15 @@
 /*         LISTA CONTACTO        */
 /* ============================= */
 
+/* fila que divide info y mapa en dos columnas */
+.contacto-fila {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-8);
+}
+
 .contacto-lista {
+  flex: 1;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -106,6 +114,45 @@ a.contacto-valor:hover {
 }
 
 /* ============================= */
+/*         SECCIÓN MAPA          */
+/* ============================= */
+
+.map-section {
+   flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.map-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: block;
+}
+
+.header-map {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.header-map iframe {
+  width: 100%;
+  height: 350px;
+  display: block;
+}
+
+/* ============================= */
 /*         RESPONSIVE            */
 /* ============================= */
 
@@ -121,5 +168,13 @@ a.contacto-valor:hover {
   .contacto-icono {
     width: 38px;
     height: 38px;
+  }
+
+  .map-title {
+    font-size: var(--text-xl);
+  }
+
+  .header-map iframe {
+    height: 220px;
   }
 }
