@@ -43,6 +43,9 @@ const Contacto = () => {
         {/* título de la sección */}
         <h2 className="contacto-titulo">Contáctanos</h2>
 
+        {/* fila con info a la izquierda y mapa a la derecha */}
+        <div className="contacto-fila">
+          
         {/* lista de contactos */}
         <ul className="contacto-lista">
           {contactoData.map((item) => (
@@ -68,6 +71,20 @@ const Contacto = () => {
           ))}
         </ul>
 
+      {/* DERECHA — mapa */}
+          <div className="map-section">
+            <div className="header-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3928773336593!2d-77.0619570252795!3d-12.085234142617544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c900e56f255d%3A0xa651cc66d9dfdc35!2sHospital%20Nacional%20PNP%20Luis%20N.%20S%C3%A1enz!5e0!3m2!1ses-419!2spe!4v1773855099875!5m2!1ses-419!2spe"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Hospital PNP"
+              />
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   )

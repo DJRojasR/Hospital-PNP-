@@ -13,10 +13,10 @@ const NavbMenu = [
         {id: 1, name:'Misión y Visión', link:'/nosotros'},
         {id: 2, name:'Cuadro de Honor', link:'/cuadro-de-honor'},
     ]},
-    {id: 3, name:'SERVICIOS EN LÍNEA', link:'/servicios', delay:0.2},
-    {id: 4, name:'ATENCIÓN CALL CENTER', link:'/atencion', delay:0.2},
-    {id: 5, name:'NOTICIAS', link:'/noticias', delay:0.2},
+    {id: 3, name:'ATENCIÓN AL CLIENTE', link:'/atencion', delay:0.2},
+    {id: 4, name:'NOTICIAS', link:'/noticias', delay:0.2},
 ]
+// {id: 3, name:'SERVICIOS EN LÍNEA', link:'/servicios', delay:0.2},
 
 // Animación de entrada desde arriba — recibe un delay para que cada
 // elemento del navbar aparezca uno después del otro
@@ -54,7 +54,11 @@ const Navbar = () => {
 
         {/* Logo + título del hospital */}
         <div className="navbar-brand">
-          <motion.img initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8, delay:0.5}} src={logo} alt="logo-png" className="logo-png"/>
+
+          <Link to="/principal">
+            <motion.img initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8, delay:0.5}} src={logo} alt="logo-png" className="logo-png"/>
+          </Link>
+          
           
           <div className="navbar-title">
             <motion.span className="navbar-title-main" variants={SlideDown(0.5)} initial="initial" animate="animate" exit="exit">
