@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Principal from './pages/Principal.jsx'
 import './App.css'
 // importa los componentes que vayas creando
-import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx'
+import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx' 
 import Mision from './components/Nosotros/Mision/Mision.jsx'
 
 
