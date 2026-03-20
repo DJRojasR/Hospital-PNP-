@@ -5,6 +5,7 @@ import './App.css'
 // importa los componentes que vayas creando
 import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx'
 import Mision from './components/Nosotros/Mision/Mision.jsx'
+import Atencion from './components/Atencion/Atencion.jsx'
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="/nosotros" element={<Mision />} />
         <Route path="/cuadro-de-honor" element={<CuadroDeHonor />} />
         {/* <Route path="/servicios" element={<Servicios />} /> */}
-        {/* <Route path="/atencion" element={<Atencion />} /> */}
+        <Route path="/atencion" element={<Atencion />} />
         {/* <Route path="/noticias" element={<Noticias />} /> */}
 
         {/* si ninguna ruta coincide muestra esto */}
