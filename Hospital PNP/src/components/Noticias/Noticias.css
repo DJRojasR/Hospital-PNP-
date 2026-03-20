@@ -1,0 +1,591 @@
+/* ================================================
+   Noticias — Hospital PNP "Luis N. Sáenz"
+   Playfair Display para títulos, Inter para cuerpo
+================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* ───────────────────────────────
+   Variables locales
+─────────────────────────────── */
+.ns-page {
+  --ns-primary:      #1a4d6e;
+  --ns-primary-dark: #1c2b36;
+  --ns-accent:       #27a69a;
+  --ns-accent-light: #a8dbd8;
+  --ns-bg:           #f4f7f9;
+  --ns-card:         #ffffff;
+  --ns-muted:        #eef2f5;
+  --ns-border:       #dce3ea;
+  --ns-text:         #1c2b36;
+  --ns-text-muted:   #6b8291;
+  --ns-font-sans: 'Open Sans', sans-serif;
+  --ns-radius:       12px;
+  --ns-shadow-sm:    0 2px 8px rgba(0,0,0,0.05);
+  --ns-shadow-md:    0 6px 24px rgba(0,0,0,0.10);
+  --ns-shadow-lg:    0 12px 40px rgba(0,0,0,0.13);
+}
+
+/* ───────────────────────────────
+   Página
+─────────────────────────────── */
+.ns-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--ns-bg);
+  font-family: var(--ns-font-sans);
+}
+
+/* ───────────────────────────────
+   Hero
+─────────────────────────────── */
+.ns-hero {
+  width: 100%;
+  background: linear-gradient(135deg,
+    #eef2f5 0%,
+    #e8f6f5 100%
+  );
+  border-bottom: 1px solid var(--ns-border);
+  padding: 5rem 8% 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ns-hero-eyebrow {
+  font-family: var(--ns-font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ns-accent);
+  margin: 0;
+}
+
+.ns-hero-title {
+  font-family: var(--ns-font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--ns-primary);
+  line-height: 1.1;
+  margin: 0.25rem 0 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.ns-hero-line {
+  width: 96px;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--ns-accent), transparent);
+  margin-bottom: 0.5rem;
+}
+
+.ns-hero-sub {
+  font-family: var(--ns-font-sans);
+  font-size: 1rem;
+  color: var(--ns-text-muted);
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ───────────────────────────────
+   Main
+─────────────────────────────── */
+.ns-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 8% 5rem;
+}
+
+/* ───────────────────────────────
+   Filtros
+─────────────────────────────── */
+.ns-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.ns-filter-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ns-text-muted);
+}
+
+.ns-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.ns-filter-btn {
+  position: relative;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  font-family: var(--ns-font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #ffffff;
+  color: #1a4d6e;
+  border-color: #dce3ea;
+  white-space: nowrap;
+}
+
+.ns-filter-btn:hover {
+  background-color: oklch(0.93 0 0);
+  color: var(--ns-text);
+}
+
+.ns-filter-btn--active {
+  background-color: #1a4d6e;
+  border-color: #1a4d6e;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ns-filter-underline {
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background-color: var(--ns-accent);
+  border-radius: 9999px;
+}
+
+/* ───────────────────────────────
+   Secciones
+─────────────────────────────── */
+.ns-section {
+  margin-bottom: 3.5rem;
+}
+
+.ns-section-title {
+  font-family: var(--ns-font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ns-primary);
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+
+/* ───────────────────────────────
+   Grids
+─────────────────────────────── */
+.ns-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ns-grid--featured {
+  grid-template-columns: 1fr;
+}
+
+.ns-grid--regular {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ───────────────────────────────
+   Cards — base
+─────────────────────────────── */
+.ns-card {
+  background-color: var(--ns-card);
+  border: 1px solid var(--ns-border);
+  border-radius: var(--ns-radius);
+  overflow: hidden;
+  box-shadow: var(--ns-shadow-sm);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.ns-card:hover {
+  box-shadow: var(--ns-shadow-lg);
+  border-color: #27a69a;
+}
+
+/* Línea dorada top */
+.ns-card-top-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ns-accent-light), var(--ns-accent), var(--ns-accent-light));
+  z-index: 2;
+}
+
+/* Overlay hover en imagen */
+.ns-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    oklch(0.35 0.06 250 / 0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.ns-card:hover .ns-card-overlay {
+  opacity: 1;
+}
+
+/* Imagen */
+.ns-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ns-card:hover .ns-card-img {
+  transform: scale(1.05);
+}
+
+/* ───────────────────────────────
+   Card FEATURED
+─────────────────────────────── */
+.ns-card--featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+}
+
+.ns-card-featured-img-wrap {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.ns-card--featured .ns-card-top-line {
+  display: none; /* la línea va en el body */
+}
+
+.ns-card-featured-body {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+/* ───────────────────────────────
+   Card REGULAR
+─────────────────────────────── */
+.ns-card--regular {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ns-card-regular-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.ns-card-regular-body {
+  padding: 1.25rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+/* ───────────────────────────────
+   Badge categoría
+─────────────────────────────── */
+.ns-badge {
+  display: inline-block;
+  padding: 0.25rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-color: #e8f6f5;
+  border: 1px solid #a8dbd8;
+  color: #1a6b65;
+  width: fit-content;
+}
+
+/* ───────────────────────────────
+   Título
+─────────────────────────────── */
+.ns-card-title {
+  font-family: var(--ns-font-serif);
+  color: var(--ns-text);
+  margin: 0;
+  line-height: 1.3;
+  transition: color 0.25s ease;
+}
+
+.ns-card-title--featured {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ns-card-title--regular {
+  font-size: 1rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ns-card:hover .ns-card-title--regular {
+  color: var(--ns-primary);
+}
+
+/* ───────────────────────────────
+   Extracto
+─────────────────────────────── */
+.ns-card-excerpt {
+  font-size: 0.9rem;
+  color: var(--ns-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ns-card-excerpt--sm {
+  font-size: 0.82rem;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;  
+}
+
+/* ───────────────────────────────
+   Divider
+─────────────────────────────── */
+.ns-card-divider {
+  border: none;
+  border-top: 1px solid var(--ns-border);
+  margin-top: auto;
+}
+
+/* ───────────────────────────────
+   Metadata
+─────────────────────────────── */
+.ns-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ns-card-author {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ns-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.ns-card-date {
+  font-size: 0.72rem;
+  color: var(--ns-text-muted);
+  white-space: nowrap;
+}
+
+/* ───────────────────────────────
+   Botón leer más
+─────────────────────────────── */
+.ns-btn-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--ns-font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ns-primary);
+  cursor: pointer;
+  transition: gap 0.25s ease;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.ns-btn-read:hover {
+  gap: 0.65rem;
+}
+
+.ns-btn-read--sm {
+  font-size: 0.78rem;
+  margin-top: 0;
+}
+
+.ns-chevron {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.ns-btn-read:hover .ns-chevron {
+  transform: translateX(4px);
+}
+
+/* ───────────────────────────────
+   Skeleton loader
+─────────────────────────────── */
+@keyframes ns-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+.ns-skeleton {
+  background-color: var(--ns-card);
+  border: 1px solid var(--ns-border);
+  border-radius: var(--ns-radius);
+  overflow: hidden;
+  animation: ns-pulse 1.6s ease-in-out infinite;
+}
+
+.ns-skeleton-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--ns-muted);
+}
+
+.ns-skeleton-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ns-skeleton-badge {
+  width: 80px;
+  height: 20px;
+  background-color: var(--ns-muted);
+  border-radius: 9999px;
+}
+
+.ns-skeleton-title {
+  width: 85%;
+  height: 18px;
+  background-color: var(--ns-muted);
+  border-radius: 6px;
+}
+
+.ns-skeleton-line {
+  width: 100%;
+  height: 13px;
+  background-color: var(--ns-muted);
+  border-radius: 6px;
+}
+
+.ns-skeleton-line--short {
+  width: 65%;
+}
+
+/* ───────────────────────────────
+   Estado vacío
+─────────────────────────────── */
+.ns-empty {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--ns-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ───────────────────────────────
+   Cargar más
+─────────────────────────────── */
+.ns-load-more {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.ns-btn-more {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--ns-primary);
+  color: #ffffff;
+  border: 1px solid var(--ns-primary);
+  border-radius: 8px;
+  font-family: var(--ns-font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ns-btn-more:hover {
+  background-color: oklch(0.28 0.06 250);
+  box-shadow: var(--ns-shadow-md);
+}
+
+/* ───────────────────────────────
+   Responsive
+─────────────────────────────── */
+@media (max-width: 1024px) {
+  .ns-grid--regular {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ns-hero {
+    padding: 3rem 6% 2.5rem;
+  }
+
+  .ns-main {
+    padding: 2.5rem 6% 3.5rem;
+  }
+
+  .ns-grid--regular {
+    grid-template-columns: 1fr;
+  }
+
+  .ns-card--featured {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ns-card-featured-img-wrap {
+    min-height: 220px;
+    aspect-ratio: 16/9;
+  }
+
+  .ns-card-featured-body {
+    padding: 1.5rem;
+  }
+
+  .ns-filter-pills {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .ns-card-title--featured {
+    font-size: 1.15rem;
+  }
+}
