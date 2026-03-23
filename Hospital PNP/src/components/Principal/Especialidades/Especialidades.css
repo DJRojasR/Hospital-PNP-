@@ -5,7 +5,7 @@
 .especialidades {
   width: 100%;
   padding: var(--space-12) 8%;
-  background-color: var(--color-surface);
+  background-color: var(--color-bg);
 }
 
 .especialidades-container {
