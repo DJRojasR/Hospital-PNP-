@@ -180,7 +180,7 @@ const NewsFilter = ({ categories, activeCategory, onCategoryChange }) => (
           aria-pressed={activeCategory === cat}
         >
           {cat}
-          {activeCategory === cat && <span className="ns-filter-underline" />}
+          
         </button>
       ))}
     </div>

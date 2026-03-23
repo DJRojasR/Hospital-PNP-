@@ -32,7 +32,7 @@
 .ns-page {
   width: 100%;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--color-bg);
   font-family: var(--ns-font-sans);
 }
 
@@ -154,15 +154,7 @@
   font-weight: 600;
 }
 
-.ns-filter-underline {
-  position: absolute;
-  bottom: -1px;
-  left: 20%;
-  right: 20%;
-  height: 2px;
-  background-color: var(--ns-accent);
-  border-radius: 9999px;
-}
+
 
 /* ───────────────────────────────
    Secciones
