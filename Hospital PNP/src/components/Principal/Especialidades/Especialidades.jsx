@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { GiStomach } from "react-icons/gi";
 import { useState } from 'react'
 import './Especialidades.css'
  
@@ -9,59 +10,80 @@ const categorias = [
     id: 1,
     nombre: 'Especialidades Médicas',
     especialidades: [
-      { id: 1,  icon: '❤️',  nombre: 'Cardiología',              descripcion: 'Diagnóstico y tratamiento de enfermedades del corazón.' },
-      { id: 2,  icon: '🧠',  nombre: 'Neurología',               descripcion: 'Atención de trastornos del sistema nervioso.' },
-      { id: 3,  icon: '🧴',  nombre: 'Dermatología',             descripcion: 'Tratamiento de enfermedades de la piel.' },
-      { id: 4,  icon: '⚖️',  nombre: 'Endocrinología',           descripcion: 'Control de hormonas y metabolismo.' },
-      { id: 5,  icon: '🍽️', nombre: 'Gastroenterología',        descripcion: 'Problemas del sistema digestivo.' },
-      { id: 6,  icon: '🩺',  nombre: 'Medicina Interna',         descripcion: 'Atención integral de adultos.' },
-      { id: 7,  icon: '💧',  nombre: 'Nefrología',               descripcion: 'Tratamiento de enfermedades renales.' },
-      { id: 8,  icon: '🌬️', nombre: 'Neumología',               descripcion: 'Enfermedades respiratorias.' },
-      { id: 9,  icon: '🎗️', nombre: 'Oncología',                descripcion: 'Diagnóstico y tratamiento del cáncer.' },
-      { id: 10, icon: '💭',  nombre: 'Psiquiatría',              descripcion: 'Salud mental y trastornos emocionales.' },
-      { id: 11, icon: '🦴',  nombre: 'Reumatología',             descripcion: 'Enfermedades de articulaciones.' },
-      { id: 12, icon: '🦠',  nombre: 'Enfermedades Infecciosas', descripcion: 'Tratamiento de infecciones.' },
-      { id: 13, icon: '🤧',  nombre: 'Alergia e Inmunología',    descripcion: 'Alergias y sistema inmune.' },
+      { id: 1, icon: '🤧', nombre: 'Alergia e Inmunología', descripcion: 'Alergias y sistema inmune.' },
+      { id: 2, icon: '❤️', nombre: 'Cardiología', descripcion: 'Enfermedades del corazón.' },
+      { id: 3, icon: '🧴', nombre: 'Dermatología', descripcion: 'Enfermedades de la piel.' },
+      { id: 4, icon: '⚖️', nombre: 'Endocrinología', descripcion: 'Hormonas y metabolismo.' },
+      { id: 5, icon: '🦠', nombre: 'Enfermedades Infecciosas', descripcion: 'Tratamiento de infecciones.' },
+      { id: 6, icon: <GiStomach/> , nombre: 'Gastroenterología', descripcion: 'Sistema digestivo.' },
+      { id: 7, icon: '🩸', nombre: 'Hematología', descripcion: 'Enfermedades de la sangre.' },
+      { id: 8, icon: '🩺', nombre: 'Medicina Interna', descripcion: 'Atención integral de adultos.' },
+      { id: 9, icon: '🧠', nombre: 'Neurología', descripcion: 'Sistema nervioso.' },
+      { id: 10, icon: '🌬️', nombre: 'Neumología', descripcion: 'Sistema respiratorio.' },
+      { id: 11, icon: '🎗️', nombre: 'Oncología', descripcion: 'Tratamiento del cáncer.' },
+      { id: 12, icon: '🦵',  nombre: 'Reumatología', descripcion: 'Enfermedades de articulaciones.' }
     ],
   },
+
   {
     id: 2,
-    nombre: 'Otras Áreas',
+    nombre: 'Materno Infantil',
     especialidades: [
-      { id: 14, icon: '👶',  nombre: 'Pediatría',                  descripcion: 'Atención médica para niños.' },
-      { id: 15, icon: '🤰',  nombre: 'Ginecología y Obstetricia',  descripcion: 'Salud femenina y embarazo.' },
-      { id: 16, icon: '💭',  nombre: 'Salud Mental',               descripcion: 'Apoyo psicológico y psiquiátrico.' },
-      { id: 17, icon: '♿',  nombre: 'Rehabilitación',             descripcion: 'Recuperación física y terapias.' },
+      { id: 12, icon: '👶', nombre: 'Cirugía Pediátrica', descripcion: 'Cirugías en niños.' },
+      { id: 13, icon: '🏥', nombre: 'Cuidados Intensivos Pediátricos', descripcion: 'UCI pediátrica.' },
+      { id: 14, icon: '🤰', nombre: 'Ginecología', descripcion: 'Salud femenina.' },
+      { id: 15, icon: '👶', nombre: 'Medicina Pediátrica', descripcion: 'Atención médica infantil.' },
+      { id: 16, icon: '🍼', nombre: 'Neonatología', descripcion: 'Atención a recién nacidos.' },
+      { id: 17, icon: '🤱', nombre: 'Obstetricia', descripcion: 'Atención del embarazo.' },
+      { id: 18, icon: '🧬', nombre: 'Reproducción Humana', descripcion: 'Fertilidad y reproducción.' },
     ],
   },
+
   {
     id: 3,
     nombre: 'Especialidades Quirúrgicas',
     especialidades: [
-      { id: 18, icon: '🔪',  nombre: 'Cirugía General',               descripcion: 'Procedimientos quirúrgicos generales.' },
-      { id: 19, icon: '🦴',  nombre: 'Traumatología y Ortopedia',     descripcion: 'Lesiones óseas y musculares.' },
-      { id: 20, icon: '🧠',  nombre: 'Neurocirugía',                  descripcion: 'Cirugías del sistema nervioso.' },
-      { id: 21, icon: '❤️',  nombre: 'Cirugía Cardiovascular',        descripcion: 'Cirugía del corazón y vasos.' },
-      { id: 22, icon: '👁️', nombre: 'Oftalmología',                  descripcion: 'Salud visual y ojos.' },
-      { id: 23, icon: '👂',  nombre: 'Otorrinolaringología',          descripcion: 'Oído, nariz y garganta.' },
-      { id: 24, icon: '🚻',  nombre: 'Urología',                      descripcion: 'Sistema urinario y reproductor masculino.' },
-      { id: 25, icon: '👶',  nombre: 'Cirugía Pediátrica',            descripcion: 'Cirugías en niños.' },
-      { id: 26, icon: '🔥',  nombre: 'Cirugía Plástica y Quemados',   descripcion: 'Reconstrucción y quemaduras.' },
+      { id: 19, icon: '🔥', nombre: 'Cirugía Plástica y Quemados', descripcion: 'Reconstrucción y quemaduras.' },
+      { id: 20, icon: '🩼', nombre: 'Ortopedia y Traumatología', descripcion: 'Lesiones óseas.' },
+      { id: 21, icon: '💉', nombre: 'Anestesiología y Centro Quirúrgico', descripcion: 'Soporte en cirugías.' },
+      { id: 22, icon: '🧑‍⚕️', nombre: 'Cirugía General', descripcion: 'Procedimientos quirúrgicos.' },
+      { id: 23, icon: '❤️', nombre: 'Cirugía de Tórax y Cardiovascular', descripcion: 'Cirugía cardíaca.' },
+      { id: 24, icon: '🧠', nombre: 'Neurocirugía', descripcion: 'Cirugía del sistema nervioso.' },
+      { id: 25, icon: '👁️', nombre: 'Oftalmología', descripcion: 'Salud visual.' },
+      { id: 26, icon: '🗣️', nombre: 'Cirugía de Cabeza y Cuello', descripcion: 'Zona cabeza/cuello.' },
+      { id: 27, icon: '🚻', nombre: 'Urología', descripcion: 'Sistema urinario.' },
+      { id: 28, icon: '👂', nombre: 'Otorrinolaringología', descripcion: 'Oído, nariz y garganta.' },
     ],
   },
+
   {
     id: 4,
-    nombre: 'Servicios',
+    nombre: 'Emergencias y Apoyo',
     especialidades: [
-      { id: 27, icon: '🧪',  nombre: 'Laboratorio Clínico',           descripcion: 'Análisis de muestras médicas.' },
-      { id: 28, icon: '🩻',  nombre: 'Imágenes (Rayos X, Eco, TAC)', descripcion: 'Diagnóstico por imágenes.' },
-      { id: 29, icon: '🔬',  nombre: 'Endoscopía y Colonoscopía',     descripcion: 'Exploración interna del sistema digestivo.' },
-      { id: 30, icon: '🚑',  nombre: 'Emergencias 24/7',              descripcion: 'Atención inmediata las 24 horas.' },
-      { id: 31, icon: '🏥',  nombre: 'UCI',                           descripcion: 'Unidad de cuidados intensivos.' },
+      { id: 29, icon: '🚑', nombre: 'Emergencia', descripcion: 'Atención inmediata.' },
+      { id: 30, icon: '🏥', nombre: 'Cuidados Intensivos', descripcion: 'UCI general.' },
+      { id: 31, icon: '🥗', nombre: 'Soporte Nutricional', descripcion: 'Apoyo alimenticio clínico.' },
     ],
   },
-]
- 
+
+  {
+    id: 5,
+    nombre: 'Diagnóstico y Tratamiento',
+    especialidades: [
+      { id: 32, icon: '👩‍⚕️', nombre: 'Asistencia Social', descripcion: 'Apoyo social al paciente.' },
+      { id: 33, icon: '🩻', nombre: 'Diagnóstico por Imágenes', descripcion: 'Rayos X, TAC, etc.' },
+      { id: 34, icon: '🩸', nombre: 'Hemoterapia y Banco de Sangre', descripcion: 'Transfusiones.' },
+      { id: 35, icon: '♿', nombre: 'Medicina de Rehabilitación', descripcion: 'Recuperación física.' },
+      { id: 36, icon: '🍎', nombre: 'Nutrición', descripcion: 'Plan alimenticio.' },
+      { id: 37, icon: '😁', nombre: 'Odontoestomatología', descripcion: 'Salud bucal.' },
+      { id: 38, icon: '🔬', nombre: 'Patología Clínica', descripcion: 'Análisis clínicos.' },
+      { id: 39, icon: '🧫', nombre: 'Anatomía Patológica', descripcion: 'Estudio de tejidos.' },
+      { id: 40, icon: '💭', nombre: 'Psicología', descripcion: 'Salud mental.' },
+      { id: 41, icon: '💊', nombre: 'Farmacia', descripcion: 'Medicamentos.' },
+    ],
+  },
+];
+
 // animación de entrada para cada tarjeta
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },

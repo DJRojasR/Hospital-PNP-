@@ -109,7 +109,7 @@ const Ipress = () => {
                 {unidad.telefono !== '—' && (
                   <span className="ipress-telefono">
                     <MdPhone size={13} />
-                    <a href={`tel:${unidad.telefono}`} className="ipress-tel-link">
+                    <a className="ipress-tel-link">
                       {unidad.telefono}
                     </a>
                   </span>
