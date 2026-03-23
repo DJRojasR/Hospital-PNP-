@@ -1,0 +1,95 @@
+/* ============================= */
+/*         DIRECTOR BASE         */
+/* ============================= */
+
+.director {
+  width: 100%;
+  padding: var(--space-12) 8%;
+  background-color: var(--color-bg);
+}
+
+.director-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* ============================= */
+/*         FOTO DIRECTOR         */
+/* ============================= */
+
+.foto-director {
+  width: 280px;
+  height: 340px;
+  object-fit: cover;        /* recorta la foto sin deformarla */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;           /* evita que la imagen se encoja */
+  border: 3px solid var(--color-border);
+  transition: transform 0.6s ease;
+}
+
+.foto-director:hover{
+    transform: scale(1.04);
+}
+
+
+
+/* ============================= */
+/*        DESCRIPCIÓN            */
+/* ============================= */
+
+.director-descripcion {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.director-titulo {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.director-descripcion p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* firma del director con estilo diferenciado */
+.director-firma {
+  font-size: var(--text-sm) !important;
+  font-weight: 600 !important;
+  color: var(--color-primary) !important;
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-4);
+  margin-top: var(--space-2);
+  line-height: 1.8 !important;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+  /* en móvil se apilan verticalmente — foto arriba, texto abajo */
+  .director-container {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .foto-director {
+    width: 300px;
+    height: 300px;
+  }
+
+  .director-titulo {
+    font-size: var(--text-xl);
+  }
+}

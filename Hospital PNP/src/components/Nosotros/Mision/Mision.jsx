@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './Mision.css'
+import Director from '../Director/Director'
 import ministerio from '../../../assets/ministeriodelinterior.png'
 import policia from '../../../assets/policiaperuana.png'
 import ministeriosa from '../../../assets/ministeriodesalud.png'
@@ -23,6 +24,7 @@ const Mision = () => {
   
   return (
     <div className="mv-page">
+      <Director />
       <section className="mv-section">
       <div className="mv-container">
  
