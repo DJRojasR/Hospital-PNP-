@@ -49,9 +49,9 @@ const comandanciaGeneral = [
 ]
 
 const direccionHospital = [
-  { src: directorsanidad, name: 'Jorge Alberto Villacorta Ruiz General Médico SPNP',             role: 'DIRECTOR DE SANIDAD POLICIAL' },
-  { src: subdirectorsanidad, name: 'Moisés Salvador Rojas Arcos General Médico SPNP',          role: 'SUB DIRECTOR SANIDAD POLICIAL ' },
-  { src: directorhospital,       name: 'Ricardo Jesus Tinoco Tejada General Médico SPNP',        role: 'DIRECTOR DEL HOSPITAL NACIONAL PNP «LUIS N. SÁENZ» ' },
+  { src: directorsanidad,  name: 'Jorge Alberto Villacorta Ruiz\nGeneral Médico SPNP',            role: 'DIRECTOR DE SANIDAD POLICIAL' },
+  { src: subdirectorsanidad, name: 'Moisés Salvador Rojas Arcos\nGeneral Médico SPNP',          role: 'SUB DIRECTOR SANIDAD POLICIAL ' },
+  { src: directorhospital,       name: 'Ricardo Jesus Tinoco Tejada\nGeneral Médico SPNP',        role: 'DIRECTOR DEL HOSPITAL NACIONAL PNP «LUIS N. SÁENZ» ' },
 ]
 
 /* ─────────────────────────────────────────
