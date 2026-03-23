@@ -156,9 +156,6 @@
   transition: color var(--transition);
 }
 
-.ipress-tel-link:hover {
-  color: var(--color-primary);
-}
 
 /* ============================= */
 /*         RESPONSIVE            */

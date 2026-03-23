@@ -13,7 +13,7 @@ const NavbMenu = [
         {id: 1, name:'Misión y Visión', link:'/nosotros'},
         {id: 2, name:'Cuadro de Honor', link:'/cuadro-de-honor'},
     ]},
-    {id: 3, name:'ATENCIÓN AL CLIENTE', link:'/atencion', delay:0.2},
+    {id: 3, name:'ATENCIÓN AL PACIENTE', link:'/atencion', delay:0.2},
     {id: 4, name:'NOTICIAS', link:'/noticias', delay:0.2},
 ]
 // {id: 3, name:'SERVICIOS EN LÍNEA', link:'/servicios', delay:0.2},
