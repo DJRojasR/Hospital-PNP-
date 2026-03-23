@@ -103,6 +103,12 @@
 /*           TARJETA             */
 /* ============================= */
 
+.especialidad-icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
 .especialidad-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
