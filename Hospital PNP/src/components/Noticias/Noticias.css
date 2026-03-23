@@ -32,7 +32,7 @@
 .ns-page {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--ns-bg);
+  background-color: #ffffff;
   font-family: var(--ns-font-sans);
 }
 

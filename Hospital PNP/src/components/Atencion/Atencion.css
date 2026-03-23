@@ -5,7 +5,7 @@
 .ipress {
   width: 100%;
   padding: var(--space-12) 8%;
-  background-color: var(--color-bg);
+  background-color: #ffffff;
 }
 
 .ipress-container {
