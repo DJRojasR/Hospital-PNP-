@@ -125,11 +125,11 @@ const Cuadrodehonor = () => (
       </section>
 
       {/* Comandancia General — destacada */}
-      <section className="ch-section ch-section--featured" aria-labelledby="comandancia-title">
+      <section className="ch-section" aria-labelledby="comandancia-title">
         <SectionHeading label="Comandancia General de la Policía Nacional del Perú" />
         <div className="ch-grid ch-grid--1">
           {comandanciaGeneral.map((p, i) => (
-            <HonorCard key={i} index={i} featured {...p} />
+            <HonorCard key={i} index={i}  {...p} />
           ))}
         </div>
       </section>
