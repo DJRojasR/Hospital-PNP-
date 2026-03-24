@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MdLocationOn, MdPhone } from 'react-icons/md'
 import './Atencion.css'
+import { motion } from 'framer-motion'
 
 // datos de todas las redes y sus unidades
 const redes = [
@@ -57,66 +58,72 @@ const redes = [
   },
 ]
 
-const Ipress = () => {
-  // por defecto muestra Lima Norte
-  const [redActiva, setRedActiva] = useState(1)
+// animación igual que en Especialidades
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { delay, duration: 0.4, ease: 'easeOut' } },
+})
 
+const Ipress = () => {
+  const [redActiva, setRedActiva] = useState(1)
   const redSeleccionada = redes.find(r => r.id === redActiva)
 
   return (
     <section className="ipress">
       <div className="ipress-container">
 
-        {/* título */}
-        <h2 className="ipress-titulo">IPRESS PNP Lima</h2>
-        <p className="ipress-subtitulo">Centros de Salud de Sanidad Policial</p>
+        {/* título con animación */}
+        <motion.div
+          className="ipress-container-mov"
+          initial={{ opacity: 0, y: -24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <h2 className="ipress-titulo">IPRESS PNP Lima</h2>
+          <p className="ipress-subtitulo">Centros de Salud de Sanidad Policial</p>
 
-        {/* tabs de redes */}
-        <div className="ipress-tabs">
-          {redes.map((red) => (
-            <button
-              key={red.id}
-              className={`ipress-tab ${redActiva === red.id ? 'activa' : ''}`}
-              onClick={() => setRedActiva(red.id)}
-            >
-              {red.nombre}
-            </button>
-          ))}
-        </div>
+          <div className="ipress-tabs">
+            {redes.map((red) => (
+              <button
+                key={red.id}
+                className={`ipress-tab ${redActiva === red.id ? 'activa' : ''}`}
+                onClick={() => setRedActiva(red.id)}
+              >
+                {red.nombre}
+              </button>
+            ))}
+          </div>
+        </motion.div>
 
-        {/* lista de unidades estilo contacto */}
+        {/* cards con fadeUp igual que Especialidades */}
         <ul className="ipress-lista">
-          {redSeleccionada.unidades.map((unidad) => (
-            <li key={unidad.id} className="ipress-item">
-
-              {/* icono dirección */}
+          {redSeleccionada.unidades.map((unidad, index) => (
+            <motion.li
+              key={`${redActiva}-${unidad.id}`}  
+              className="ipress-item"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08, duration: 0.4, ease: 'easeOut' }}
+            >
               <span className="ipress-icono">
                 <MdLocationOn size={22} />
               </span>
 
               <div className="ipress-info">
-                {/* nombre de la unidad como label */}
                 <span className="ipress-label">{unidad.nombre}</span>
-
-                {/* dirección */}
                 <span className="ipress-valor">
-                 <a href={unidad.link} target="_blank" rel="noopener noreferrer" className="contacto-valor">
+                  <a href={unidad.link} target="_blank" rel="noopener noreferrer" className="contacto-valor">
                     {unidad.direccion}
                   </a>
                 </span>
-
-                {/* teléfono solo si existe */}
                 {unidad.telefono !== '—' && (
                   <span className="ipress-telefono">
                     <MdPhone size={13} />
-                    <a className="ipress-tel-link">
-                      {unidad.telefono}
-                    </a>
+                    <a className="ipress-tel-link">{unidad.telefono}</a>
                   </span>
                 )}
               </div>
-
-            </li>
+            </motion.li>
           ))}
         </ul>
 
