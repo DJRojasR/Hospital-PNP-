@@ -38,34 +38,35 @@
 ─────────────────────────────── */
 .ch-hero {
   width: 100%;
-  background-color: var(--ch-surface);
-  border-bottom: 1px solid var(--ch-border);
-  padding: 4rem 8% 3rem;
+  background-color: var(--color-bg);
+  padding: 1.5rem 8% 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 
 .ch-hero-eyebrow {
-  font-family: var(--ch-font-sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ch-gold);
+  font-family: var(--ch-font-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--ch-navy);
   margin: 0;
 }
 
 .ch-hero-title {
-  font-family: var(--ch-font-serif);
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 700;
+  font-family: var(--ch-font-sans);
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--ch-navy);
-  line-height: 1.15;
-  margin: 0.35rem 0 1.1rem;
-  letter-spacing: 0.01em;
+  opacity: 0.75;
+  margin-top: 1rem;
+  max-width: 520px;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
 }
 
 .ch-hero-line {
@@ -76,28 +77,16 @@
   transform-origin: center;
 }
 
-.ch-hero-lema {
-  font-family: var(--ch-font-sans);
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--ch-navy);
-  opacity: 0.65;
-  margin-top: 1rem;
-  max-width: 520px;
-  line-height: 1.6;
-  text-align: center;
-  font-style: italic;
-}
 /* ───────────────────────────────
    Cuerpo
 ─────────────────────────────── */
 .ch-body {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3.5rem 8% 4rem;
+  padding: 2rem 8% 3rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 /* ───────────────────────────────
