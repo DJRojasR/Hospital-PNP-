@@ -16,6 +16,7 @@
   gap: var(--space-12);
 }
 
+
 /* ============================= */
 /*            TÍTULOS            */
 /* ============================= */
@@ -102,6 +103,12 @@
 /* ============================= */
 /*           TARJETA             */
 /* ============================= */
+
+.especialidad-icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
 
 .especialidad-card {
   background-color: var(--color-surface);

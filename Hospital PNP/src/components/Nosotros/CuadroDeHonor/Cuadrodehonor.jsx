@@ -83,32 +83,22 @@ const Cuadrodehonor = () => (
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <motion.p
+      <motion.h2
         className="ch-hero-eyebrow"
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.15 }}
       >
-        Hospital Nacional PNP "Luis N. Sáenz"
-      </motion.p>
+         Cuadro de Honor
+      </motion.h2>
       <motion.h1
         className="ch-hero-title"
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.25 }}
       >
-        Cuadro de Honor
-      </motion.h1>
-      <motion.div
-        className="ch-hero-line"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
-      />
-        <p className="ch-hero-lema">
         Autoridades comprometidas con la salud y bienestar del personal policial y sus familias
-        </p>
-
+      </motion.h1>
     </motion.header>
 
     {/* ── Cuerpo ── */}

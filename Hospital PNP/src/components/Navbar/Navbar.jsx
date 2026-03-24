@@ -19,7 +19,12 @@ const NavbMenu = [
       { id: 2, name: 'Cuadro de Honor',  link: '/cuadro-de-honor' },
     ]
   },
-  { id: 3, name: 'ATENCIÓN AL PACIENTE', link: '/atencion',  delay: 0.2 },
+  { id: 3, name: 'ATENCIÓN AL PACIENTE', link: '#',  delay: 0.2 ,
+     dropdown: [
+      { id: 1, name: 'Centros de Salud',  link: '/atencion' },
+      { id: 2, name: 'Portal',  link: '/portal' }
+    ]
+  },
   { id: 4, name: 'NOTICIAS',             link: '/noticias',  delay: 0.2 },
 ]
 
