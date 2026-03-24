@@ -48,11 +48,11 @@
 }
 
 .ch-hero-eyebrow {
-  font-family: var(--ch-font-serif);
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  color: var(--ch-navy);
+  font-family: var(--font-body);
+  font-size: var(--text-3xl, 2rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
   margin: 0;
 }
 
