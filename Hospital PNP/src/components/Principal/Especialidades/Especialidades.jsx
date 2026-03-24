@@ -146,7 +146,6 @@ const Especialidades = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   )
