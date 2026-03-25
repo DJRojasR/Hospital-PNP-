@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/Noticias2.css'
-import ImagenNot2 from '../../../assets/noticias/noticia2.jpg'
+import ImagenNot2 from '../../../assets/noticia2.jpg'
 
 const Noticia2 = () => {
   return (
@@ -30,7 +30,7 @@ const Noticia2 = () => {
         </div>
         <div className="bbc-key-item">
           <span className="bbc-key-label">📅 FECHA</span>
-          <span className="bbc-key-value">Día Mundial de la Prevención del Cáncer de Cuello Uterino</span>
+          <span className="bbc-key-value">11 de marzo de 2026</span>
         </div>
       </div>
 
