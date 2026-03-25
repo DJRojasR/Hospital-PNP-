@@ -1,11 +1,10 @@
-// src/components/Noticias/NoticiaDetalle.jsx
-import React from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getNoticiaById } from './pages/index'
 
+
 // Falta importa el css 
-const NoticiaDetalle = () => {
+const NoticiasDetalle = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   
@@ -87,4 +86,4 @@ const NoticiaDetalle = () => {
   )
 }
 
-export default NoticiaDetalle
+export default NoticiasDetalle
