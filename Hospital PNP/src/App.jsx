@@ -7,7 +7,7 @@ import Noticias from './components/Noticias/Noticias.jsx'
 import Atencion from './components/Atencion/Atencion.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Principal from './components/Principal/pages/principal.jsx'
-import NoticiaDetalle from './components/Noticias/NoticasDetalle.jsx'
+import NoticiaDetalle from './components/Noticias/NoticiasDetalle.jsx'
 
 
 
