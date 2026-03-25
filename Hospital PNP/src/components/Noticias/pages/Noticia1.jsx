@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/Noticias1.css'
-import ImagenNot1 from '../../../assets/noticias/noticia1.jpeg'
+import ImagenNot1 from '../../../assets/Noticias/noticia1.jpeg'
 
 const Noticia1 = () => {
   return (
