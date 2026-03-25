@@ -1,5 +1,6 @@
 // src/components/Noticias/pages/Noticia4.jsx
 import React from 'react'
+import './styles/Noticias3.css'
 
 const Noticia3 = () => {
   return (
