@@ -36,6 +36,7 @@ const NewsCard = ({ id, title, excerpt, imageUrl, date, category, author, featur
         transition={{ duration: 0.5, delay: index * 0.08 }}
         tabIndex={0}
         aria-label={title}
+        onClick={handleReadMore}
       >
         <div className="ns-card-featured-img-wrap">
           <img src={imageUrl} alt={`Imagen de la noticia: ${title}`} className="ns-card-img" />
@@ -74,6 +75,7 @@ const NewsCard = ({ id, title, excerpt, imageUrl, date, category, author, featur
       transition={{ duration: 0.5, delay: index * 0.08 }}
       tabIndex={0}
       aria-label={title}
+      onClick={handleReadMore}
     >
       <div className="ns-card-regular-img-wrap">
         <img src={imageUrl} alt={`Imagen de la noticia: ${title}`} className="ns-card-img" />
