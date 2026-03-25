@@ -1,1 +1,227 @@
-// Hola mundo 
+/* ============================
+   ESTILOS ADICIONALES - NOTICIA 1
+   CAMPAÑA QUIRÚRGICA
+   ============================ */
+
+/* Tarjeta del director */
+.noticia1-director-card {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin: var(--space-6) 0;
+  color: var(--color-text-light);
+}
+
+.noticia1-director-rank {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-2);
+  opacity: 0.9;
+}
+
+.noticia1-director-name {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.noticia1-director-role {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+/* Grid de departamentos */
+.noticia1-departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.noticia1-department-card {
+  background: var(--color-bg);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid var(--color-border);
+}
+
+.noticia1-department-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.noticia1-department-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.noticia1-department-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.noticia1-department-leader {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.noticia1-department-leader strong {
+  color: var(--color-accent);
+}
+
+.noticia1-department-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Estadísticas */
+.noticia1-stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.noticia1-stat-card {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  padding: var(--space-5) var(--space-3);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.noticia1-stat-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  line-height: 1;
+}
+
+.noticia1-stat-label {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+/* Equipo en flex */
+.noticia1-team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin: var(--space-6) 0;
+}
+
+.noticia1-team-card {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition);
+}
+
+.noticia1-team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.noticia1-team-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+}
+
+.noticia1-team-count {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.noticia1-team-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .noticia1-departments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .noticia1-stats-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .noticia1-stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .noticia1-team-flex {
+    flex-direction: column;
+  }
+  
+  .noticia1-team-card {
+    min-width: auto;
+  }
+  
+  .noticia1-director-name {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .noticia1-department-icon {
+    font-size: 2rem;
+  }
+  
+  .noticia1-stat-number {
+    font-size: 2rem;
+  }
+  
+  .noticia1-team-count {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animaciones específicas */
+.noticia1-department-card,
+.noticia1-stat-card,
+.noticia1-team-card,
+.noticia1-director-card {
+  animation: noticia1-fadeInUp 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.noticia1-department-card:nth-child(1) { animation-delay: 0.05s; }
+.noticia1-department-card:nth-child(2) { animation-delay: 0.1s; }
+.noticia1-department-card:nth-child(3) { animation-delay: 0.15s; }
+
+.noticia1-team-card:nth-child(1) { animation-delay: 0.05s; }
+.noticia1-team-card:nth-child(2) { animation-delay: 0.1s; }
+.noticia1-team-card:nth-child(3) { animation-delay: 0.15s; }
+.noticia1-team-card:nth-child(4) { animation-delay: 0.2s; }
+.noticia1-team-card:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes noticia1-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
