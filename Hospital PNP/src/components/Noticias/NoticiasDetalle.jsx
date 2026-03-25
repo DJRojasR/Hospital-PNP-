@@ -2,9 +2,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getNoticiaById } from './pages/index'
 import './NoticiasDetalle.css'
-
-
-// Falta importa el css 
+ 
 const NoticiasDetalle = () => {
   const { id } = useParams()
   const navigate = useNavigate()

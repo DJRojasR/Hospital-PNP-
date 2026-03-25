@@ -6,6 +6,8 @@ import Noticia4 from './Noticia4'
 import Noticia5 from './Noticia5'
 import Noticia6 from './Noticia6'
 import ImagenNot2 from '../../../assets/noticias/cancerdecuello.jpg'
+import ceremonia from '../../../assets/Noticias/ceremonia.jpeg'
+
 
 // Mapeo de IDs a componentes de contenido (cada uno con su formato único)
 export const noticiasContenido = {
@@ -43,8 +45,8 @@ export const noticiasMetadata = {
     id: '3',
     title: 'Ceremonia de reconocimiento al personal médico destacado',
     excerpt: 'El Hospital PNP celebró su ceremonia anual de reconocimiento, donde se distinguió a profesionales de la salud por su dedicación y excelencia en el servicio.',
-    imageUrl: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&h=450&fit=crop',
-    date: new Date('2026-03-10'),
+    imageUrl: ceremonia ,
+    date: new Date('2026-03-2'),
     category: 'Eventos',
     author: 'Dirección del Hospital',
     featured: false,
