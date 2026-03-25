@@ -1,8 +1,8 @@
 // src/components/Noticias/pages/Noticia5.jsx
 import React from 'react'
 import './styles/Noticias4.css'
-import comida from '../../../assets/noticias/capacitacionC.jpeg'
-import personal from '../../../assets/noticias/capacitacionP.jpeg'
+import comida from '../../../assets/Noticias/capacitacionC.jpeg'
+import personal from '../../../assets/Noticias/capacitacionP.jpeg'
 const Noticia4 = () => {
   return (
     <div className="nd-custom-content">
