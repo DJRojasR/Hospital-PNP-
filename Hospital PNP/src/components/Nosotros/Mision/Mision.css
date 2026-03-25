@@ -30,7 +30,7 @@
 
 .mv-title {
   font-family: var(--font-body);
-  font-size: var(--text-3xl, 2rem);
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1.2;
@@ -366,7 +366,7 @@
   }
 
   .mv-title {
-    font-size: var(--text-2xl, 1.5rem);
+    font-size: var(--text-xl);
   }
 
   .logobar-item img {
