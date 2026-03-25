@@ -4,11 +4,11 @@ import Noticia2 from './Noticia2'
 import Noticia3 from './Noticia3'
 import Noticia4 from './Noticia4'
 import Noticia5 from './Noticia5'
-import ImagenNot2 from '../../../assets/noticias/cancerdecuello.jpg'
-import ImagenNot1 from '../../../assets/noticias/campquirur.jpeg'
+import ImagenNot2 from '../../../assets//Noticias/cancerdecuello.jpg'
+import ImagenNot1 from '../../../assets/Noticias/campquirur.jpeg'
 import ceremonia from '../../../assets/Noticias/ceremonia.jpeg'
-import capacitacion from '../../../assets/noticias/capacitacion.jpeg'
-import riñon from '../../../assets/noticias/riñon.jpeg'
+import capacitacion from '../../../assets/Noticias/capacitacion.jpeg'
+import riñon from '../../../assets/Noticias/rinon.jpeg'
 
 
 // Mapeo de IDs a componentes de contenido (cada uno con su formato único)
