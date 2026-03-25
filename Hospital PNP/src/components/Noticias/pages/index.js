@@ -5,6 +5,7 @@ import Noticia3 from './Noticia3'
 import Noticia4 from './Noticia4'
 import Noticia5 from './Noticia5'
 import Noticia6 from './Noticia6'
+import ImagenNot2 from '../../../assets/noticias/cancerdecuello.jpg'
 
 // Mapeo de IDs a componentes de contenido (cada uno con su formato único)
 export const noticiasContenido = {
@@ -32,7 +33,7 @@ export const noticiasMetadata = {
     id: '2',
     title: 'Campaña de prevención cardiovascular para efectivos policiales',
     excerpt: 'El área de cardiología lanzó una campaña de chequeos preventivos gratuitos para detectar factores de riesgo en el personal activo de la PNP.',
-    imageUrl: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=450&fit=crop',
+    imageUrl: ImagenNot2,
     date: new Date('2026-03-14'),
     category: 'Salud',
     author: 'Área de Cardiología',
