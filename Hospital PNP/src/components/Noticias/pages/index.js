@@ -6,6 +6,7 @@ import Noticia4 from './Noticia4'
 import Noticia5 from './Noticia5'
 import Noticia6 from './Noticia6'
 import ImagenNot2 from '../../../assets/noticias/cancerdecuello.jpg'
+import ImagenNot1 from '../../../assets/noticias/campquirur.jpeg'
 import ceremonia from '../../../assets/Noticias/ceremonia.jpeg'
 
 
@@ -23,22 +24,22 @@ export const noticiasContenido = {
 export const noticiasMetadata = {
   '1': {
     id: '1',
-    title: 'Hospital PNP implementa nuevo protocolo de atención al paciente',
-    excerpt: 'Se inicia la implementación del protocolo de atención integral con nuevas medidas orientadas a mejorar la calidad del servicio brindado al personal policial y sus familias.',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173f7f869?w=800&h=450&fit=crop',
-    date: new Date('2026-03-18'),
+    title: 'Hospital Nacional PNP Luis N. Sáenz realiza exitosa campaña quirúrgica en beneficio de nuestra familia policial',
+    excerpt: 'Se realizó con éxito una importante campaña quirúrgica donde se llevaron a cabo cerca de 35 procedimientos en tres salas de operaciones en simultáneo, reduciendo significativamente la lista de espera.',
+    imageUrl: ImagenNot1,
+    date: new Date('2026-03-24'),
     category: 'Institucionales',
-    author: 'Departamento de Comunicaciones',
+    author: 'Dirección del Hospital',
     featured: true,
   },
   '2': {
     id: '2',
-    title: 'Campaña de prevención cardiovascular para efectivos policiales',
-    excerpt: 'El área de cardiología lanzó una campaña de chequeos preventivos gratuitos para detectar factores de riesgo en el personal activo de la PNP.',
+    title: 'Gran Campaña de Prevención: Juntos contra el Cáncer de Cuello Uterino',
+    excerpt: 'En el marco del Día Mundial de la Prevención del Cáncer de Cuello Uterino, se llevo a cabo una importante campaña integral orientada a la prevención, detección temprana y concientización de esta enfermedad.',
     imageUrl: ImagenNot2,
-    date: new Date('2026-03-14'),
+    date: new Date('2026-03-21'),
     category: 'Salud',
-    author: 'Área de Cardiología',
+    author: 'Departamento de Ginecología',
     featured: false,
   },
   '3': {
