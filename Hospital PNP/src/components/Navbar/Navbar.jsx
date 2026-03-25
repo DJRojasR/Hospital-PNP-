@@ -15,7 +15,7 @@ const NavbMenu = [
   { id: 1, name: 'PRINCIPAL',            link: '/principal', delay: 0.2 },
   { id: 2, name: 'NOSOTROS',             link: '#',          delay: 0.3,
     dropdown: [
-      { id: 1, name: 'Misión y Visión',  link: '/nosotros'        },
+      { id: 1, name: 'Conócenos',  link: '/nosotros'        },
       { id: 2, name: 'Cuadro de Honor',  link: '/cuadro-de-honor' },
     ]
   },

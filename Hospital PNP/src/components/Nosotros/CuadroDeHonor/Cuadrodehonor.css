@@ -56,6 +56,18 @@
   margin: 0;
 }
 
+.ch-hero-eyebrow-divider{
+   margin-top: var(--space-3, 0.75rem);
+  width: 240px;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-primary) 100%
+  );
+}
+
 .ch-hero-title {
   font-family: var(--ch-font-sans);
   font-size: 1rem;

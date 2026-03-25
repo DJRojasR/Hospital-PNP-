@@ -1,14 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar/Navbar.jsx'
-import Principal from './pages/Principal.jsx'
 import './App.css'
 // importa los componentes que vayas creando
 import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx' 
 import Mision from './components/Nosotros/Mision/Mision.jsx'
-
 import Noticias from './components/Noticias/Noticias.jsx'
-
 import Atencion from './components/Atencion/Atencion.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import Principal from './pages/Principal.jsx'
 
 
 
@@ -30,10 +28,13 @@ const App = () => {
         {/* <Route path="/servicios" element={<Servicios />} /> */}
 
         {/* <Route path="/atencion" element={<Atencion />} /> */}
+        <Route path="/atencion" element={<Atencion />} />
+
+
+        {/* <Route path="/noticias" element={<Noticias />} /> */}
         <Route path="/noticias" element={<Noticias />} />
 
-        <Route path="/atencion" element={<Atencion />} />
-        {/* <Route path="/noticias" element={<Noticias />} /> */}
+   
 
 
         {/* si ninguna ruta coincide muestra esto */}

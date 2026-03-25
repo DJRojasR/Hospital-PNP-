@@ -91,6 +91,7 @@ const Cuadrodehonor = () => (
       >
          Cuadro de Honor
       </motion.h2>
+      <motion.div className="ch-hero-eyebrow-divider" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} />
       <motion.h1
         className="ch-hero-title"
         initial={{ opacity: 0, y: -16 }}
@@ -126,7 +127,7 @@ const Cuadrodehonor = () => (
 
       {/* Dirección del Hospital */}
       <section className="ch-section" aria-labelledby="hospital-title">
-        <SectionHeading label="Dirección del Hospital" />
+        <SectionHeading label="Dirección de Sanidad Policial" />
         <div className="ch-grid ch-grid--4">
           {direccionHospital.map((p, i) => (
             <HonorCard key={i} index={i} {...p} />

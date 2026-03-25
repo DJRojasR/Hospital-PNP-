@@ -64,7 +64,6 @@ const Mision = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h1 className="mv-title">Misión y Visión</h1>
-          <div className="mv-divider" />
         </motion.div>
  
         {/* Tarjetas */}
