@@ -11,7 +11,7 @@ const Noticia4 = () => {
       {/* Introducción destacada */}
       <div className="bbc-intro-block">
         <p className="bbc-intro-text">
-          ✨ <strong>HOSPITAL NACIONAL PNP LUIS N. SÁENZ: LUNES PATRIÓTICO QUE FORTALECE EL ESPÍRITU INSTITUCIONAL</strong> ✨
+          ✨ <strong> HOSPITAL NACIONAL PNP LUIS N. SÁENZ: LUNES PATRIÓTICO QUE FORTALECE NUESTRO ESPÍRITU INSTITUCIONAL</strong> ✨
         </p>
         <p className="bbc-intro-sub">
           El nosocomio reafirma su compromiso con los valores de civismo, identidad nacional y servicio a la familia policial.
