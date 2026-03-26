@@ -1,4 +1,3 @@
-// src/components/Noticias/pages/Noticia4.jsx
 import React from 'react'
 import './styles/Noticias3.css'
 import autoridades from '../../../assets/Noticias/ceremoniaAutoridades.jpeg'
@@ -51,7 +50,6 @@ const Noticia4 = () => {
 
         {/* Cita destacada */}
         <div className="bbc-quote">
-          <div className="bbc-quote-icon">"</div>
           <p className="bbc-quote-text">
             Mantener vivos los valores institucionales y la vocación de servicio es fundamental para fortalecer 
             nuestro compromiso con la familia policial y la patria.
@@ -66,21 +64,17 @@ const Noticia4 = () => {
         <p>
           La ceremonia fue presidida por el señor GRAL. S PNP Ricardo Jesús Tinoco Tejada, Director del Hospital, 
           acompañado por el CRNL. S PNP Edwin Infantes Vilca, Secretario del nosocomio, y el CNRL. S PNP David Zárate Gamarra, 
-          Jefe de la Oficina de Administración.
+          Jefe de la Oficina de Ainistración.
         </p>
 
-        {/* Galería de imágenes */}
-        <div className="bbc-gallery">
-          <div className="bbc-gallery-grid">
-            <div className="bbc-gallery-item">
-              <img src={autoridades} alt="Izamiento del Pabellón Nacional" />
-            </div>
-
-          </div>
-          <p className="bbc-gallery-caption">
-            Momentos destacados de la Ceremonia del Lunes Patriótico en el Hospital Nacional PNP "Luis N. Sáenz"
-          </p>
+        {/* Galería de imágenes */}  
+        <div className="bbc-gallery-item">
+          <img src={autoridades} alt="Izamiento del Pabellón Nacional" />
         </div>
+        <p className="bbc-gallery-caption">
+          Momentos destacados de la Ceremonia del Lunes Patriótico en el Hospital Nacional PNP "Luis N. Sáenz"
+        </p>
+
 
         <h2 className="bbc-section-title">Reconocimientos institucionales</h2>
         
@@ -90,10 +84,8 @@ const Noticia4 = () => {
         </p>
 
         {/* Autoridades */}
-        <div className="bbc-authorities">
-          <div className="bbc-gallery-item">
-              <img src={ganadores} alt="Izamiento del Pabellón Nacional" />
-          </div>
+        <div className="bbc-gallery-item">
+            <img src={ganadores} alt="Izamiento del Pabellón Nacional" />
         </div>
         <p>
           El Lunes Patriótico se consolida como una tradición que fortalece el espíritu institucional y reafirma 

@@ -9,7 +9,7 @@ const Noticia1 = () => {
       {/* Introducción destacada */}
       <div className="bbc-intro-block">
         <p className="bbc-intro-text">
-          💙✨ <strong>HOSPITAL NACIONAL PNP LUIS N. SÁENZ REALIZA EXITOSA CAMPAÑA QUIRÚRGICA EN BENEFICIO DE NUESTRA FAMILIA POLICIAL</strong> ✨💙
+          💙✨ <strong>HOSPITAL NACIONAL PNP LUIS N. SÁENZ REALIZA EXITOSA CAMPAÑA QUIRÚRGICA EN BENEFICIO DE NUESTRA FAMILIA POLICIAL</strong>{' '} ✨💙
         </p>
         <p className="bbc-intro-sub">
           Se realizó con éxito una importante campaña quirúrgica donde se llevaron a cabo cerca de 35 procedimientos 
@@ -47,8 +47,8 @@ const Noticia1 = () => {
         <h2 className="bbc-section-title">Liderazgo institucional</h2>
         
         <p>
-          Esta importante iniciativa fue liderada por la <strong>Dirección del hospital</strong>, bajo la conducción 
-          del <strong>GRNL. S PNP Ricardo Jesús Tinoco Tejada</strong>, quien supervisó personalmente el desarrollo 
+          Esta importante iniciativa fue liderada por la <strong>Dirección del hospital</strong>{' '}, bajo la conducción 
+          del <strong>GRNL. S PNP Ricardo Jesús Tinoco Tejada</strong>{' '}, quien supervisó personalmente el desarrollo 
           de las intervenciones y reafirmó el compromiso de la institución con la salud de los efectivos policiales 
           y sus familias.
         </p>
@@ -72,52 +72,51 @@ const Noticia1 = () => {
           <div className="noticia1-department-card">
             <div className="noticia1-department-icon">🩻</div>
             <h3 className="noticia1-department-title">Departamento de Traumatología</h3>
-            <p className="noticia1-department-leader">a cargo del <strong>CMDTE. S PNP Daniel Ponce De León Villanueva</strong></p>
+            <p className="noticia1-department-leader">a cargo del <strong>CMDTE. S PNP Daniel Ponce De León Villanueva</strong>{' '}</p>
             <p className="noticia1-department-desc">Especialistas en cirugías ortopédicas y traumatológicas</p>
           </div>
           <div className="noticia1-department-card">
             <div className="noticia1-department-icon">🏥</div>
             <h3 className="noticia1-department-title">Centro Quirúrgico y Anestesiología</h3>
-            <p className="noticia1-department-leader">liderado por la <strong>CMDTE. S PNP Rosario Margarita Carranza Gonzales</strong></p>
+            <p className="noticia1-department-leader">liderado por la <strong>CMDTE. S PNP Rosario Margarita Carranza Gonzales</strong>{' '}</p>
             <p className="noticia1-department-desc">Garantizando la seguridad y bienestar de los pacientes durante las intervenciones</p>
           </div>
           <div className="noticia1-department-card">
             <div className="noticia1-department-icon">📋</div>
             <h3 className="noticia1-department-title">Área de MOPRI</h3>
-            <p className="noticia1-department-leader">representada por la <strong>CMDTE. S PNP Yvette Sarella Nolte Pardo Figueroa</strong></p>
+            <p className="noticia1-department-leader">representada por la <strong>CMDTE. S PNP Yvette Sarella Nolte Pardo Figueroa</strong>{' '}</p>
             <p className="noticia1-department-desc">Coordinación y gestión de los procedimientos quirúrgicos</p>
           </div>
         </div>
 
         {/* ========== IMAGEN EN LA MITAD ========== */}
-                <div className="noticia1-mid-image">
-                  <img 
-                    src={ImagenNot1} 
-                    alt="Campaña quirurgica en beneficio de nuestra familia policial"
-                    className="noticia1-mid-img"
-                  />
-                </div>
+        <div className="noticia1-mid-image">
+          <img 
+            src={ImagenNot1} 
+            alt="Campaña quirurgica en beneficio de nuestra familia policial"
+            className="noticia1-mid-img"
+          />
+        </div>
         {/* Sección: Cobertura de la campaña */}
 
         <h2 className="bbc-section-title">Alcance y resultados de la campaña</h2>
         <p>
           La campaña quirúrgica permitió intervenir a pacientes con patologías de diversa complejidad, 
           entre las que destacan <strong>cirugías de rodilla, cadera, hombro, así como procedimientos de 
-          artroscopía y colocación de prótesis</strong>. Gracias a la optimización de los recursos y la 
+          artroscopía y colocación de prótesis</strong>{' '}. Gracias a la optimización de los recursos y la 
           coordinación entre los equipos médicos, se logró reducir en más de un 40% la lista de espera 
           acumulada en el departamento de Traumatología.
         </p>
 
         {/* Cita destacada */}
         <div className="bbc-quote">
-          <div className="bbc-quote-icon"></div>
           <p className="bbc-quote-text">
             Esta campaña quirúrgica demuestra que cuando trabajamos unidos con vocación de servicio, 
             podemos superar los desafíos y brindar una atención oportuna a quienes tanto lo necesitan. 
             Seguiremos impulsando estas iniciativas para el bienestar de nuestra familia policial.
           </p>
           <footer className="bbc-quote-footer">
-            — <strong>GRNL. S PNP Ricardo Jesús Tinoco Tejada</strong>, Director del Hospital
+            — <strong>GRNL. S PNP Ricardo Jesús Tinoco Tejada</strong>{' '}, Director del Hospital
           </footer>
         </div>
      
@@ -142,7 +141,7 @@ const Noticia1 = () => {
         <div className="bbc-highlight-box">
           <div className="bbc-highlight-icon">🏥</div>
           <div className="bbc-highlight-content">
-            <strong>Seguimos comprometidos con una atención eficiente, continua y humana.</strong> 
+            <strong>Seguimos comprometidos con una atención eficiente, continua y humana.</strong>{' '} 
             El Hospital Nacional PNP "Luis N. Sáenz" continuará desarrollando estas campañas quirúrgicas 
             con el objetivo de reducir progresivamente la lista de espera y garantizar el bienestar de 
             nuestra familia policial.
@@ -162,7 +161,7 @@ const Noticia1 = () => {
 
         <p>
           Para más información sobre las próximas campañas, los interesados pueden acercarse al <strong>Área de 
-          MOPRI</strong> o comunicarse a los canales oficiales del hospital. ¡La salud de nuestra familia 
+          MOPRI</strong>{' '} o comunicarse a los canales oficiales del hospital. ¡La salud de nuestra familia 
           policial es nuestra prioridad!
         </p>
       </div>

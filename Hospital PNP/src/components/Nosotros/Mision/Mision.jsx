@@ -119,7 +119,7 @@ const Mision = () => {
         <div className="logobar-viewport">
           <div className="logobar-track">
             {track.map((logo, i) => (
-              <div className="logobar-item" key={i}>
+              <div className="logobar-item" key={`${logo.alt}-${i}`}>
                 <img src={logo.src} alt={logo.alt} />
               </div>
             ))}

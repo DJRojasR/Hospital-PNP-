@@ -6,7 +6,7 @@
 
 
 /* ───────────────────────────────
-   Variables locales de honor
+   Variables locales de honor y pagina
 ─────────────────────────────── */
 .ch-page {
   --ch-gold:        oklch(0.75 0.12 85);
@@ -22,16 +22,12 @@
   --ch-shadow-sm:   0 2px 8px rgba(0,0,0,0.06);
   --ch-shadow-md:   0 6px 24px rgba(0,0,0,0.10);
   --ch-shadow-lg:   0 12px 40px rgba(0,0,0,0.13);
-}
 
-/* ───────────────────────────────
-   Página
-─────────────────────────────── */
-.ch-page {
   width: 100%;
   background-color: var(--color-bg);
   min-height: 100vh;
 }
+
 
 /* ───────────────────────────────
    Hero

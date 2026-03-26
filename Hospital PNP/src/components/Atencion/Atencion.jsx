@@ -58,13 +58,9 @@ const redes = [
   },
 ]
 
-// animación igual que en Especialidades
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { delay, duration: 0.4, ease: 'easeOut' } },
-})
 
 const Ipress = () => {
+  
   const [redActiva, setRedActiva] = useState(1)
   const redSeleccionada = redes.find(r => r.id === redActiva)
 
@@ -119,7 +115,7 @@ const Ipress = () => {
                 {unidad.telefono !== '—' && (
                   <span className="ipress-telefono">
                     <MdPhone size={13} />
-                    <a className="ipress-tel-link">{unidad.telefono}</a>
+                    <span className="ipress-tel-link">{unidad.telefono}</span>
                   </span>
                 )}
               </div>
