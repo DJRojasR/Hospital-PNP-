@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles/Noticias4.css'
 //import nefrologia from '../../../assets/noticias/nefrologia.jpeg'
-import hemo from '../../../assets/noticias/rinonE.jpeg'
-import nefro from '../../../assets/noticias/rinonP.jpeg'
+import hemo from '../../../assets/Noticias/rinonE.jpeg'
+import nefro from '../../../assets/Noticias/rinonP.jpeg'
 
 const Noticia5 = () => {
   return (
