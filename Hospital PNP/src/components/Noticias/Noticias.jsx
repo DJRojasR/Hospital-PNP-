@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom' // 👈 Importar useNavigate
 import { noticiasArray } from './pages/index' // 👈 Importar desde pages
 import './Noticias.css'
+import PropTypes from 'prop-types'
 
 const CATEGORIES = ['Todas', 'Institucionales', 'Salud', 'Eventos', 'Capacitación']
 
@@ -105,6 +106,20 @@ const NewsCard = ({ id, title, excerpt, imageUrl, date, category, author, featur
       </div>
     </motion.article>
   )
+}
+
+//validacion
+NewsCard.propTypes = {
+  id:         PropTypes.string.isRequired,
+  title:      PropTypes.string.isRequired,
+  excerpt:    PropTypes.string.isRequired,
+  imageUrl:   PropTypes.string.isRequired,
+  date:       PropTypes.instanceOf(Date).isRequired,
+  category:   PropTypes.string.isRequired,
+  author:     PropTypes.string.isRequired,
+  featured:   PropTypes.bool,
+  index:      PropTypes.number,
+  onReadMore: PropTypes.func.isRequired,
 }
 
 // NewsFilter (igual)

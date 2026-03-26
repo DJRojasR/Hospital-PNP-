@@ -159,17 +159,9 @@
   margin-bottom: var(--space-4);
 }
 
-.bbc-gallery-item {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
 
 .bbc-gallery-item:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .bbc-gallery-placeholder {
@@ -205,14 +197,6 @@
 /* ============================
    TABLA DE AUTORIDADES
    ============================ */
-.bbc-authorities {
-  margin: var(--space-8) 0;
-  padding: var(--space-6);
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-}
-
 .bbc-authorities-title {
   font-size: var(--text-base);
   font-weight: 600;

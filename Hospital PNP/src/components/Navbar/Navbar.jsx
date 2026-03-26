@@ -126,12 +126,16 @@ const Navbar = () => {
 
                   // CASO CON DROPDOWN: click llama a handleDropdown
                   // que abre o cierra el submenú en móvil
-                  <span onClick={() => handleDropdown(menu.id)}>
+                  <button
+                    type="button"
+                    className="menu-button"       // clase para heredar estilos
+                    aria-expanded={dropdownOpen === menu.id}
+                    aria-haspopup="true"
+                    onClick={() => handleDropdown(menu.id)}
+                  >
                     {menu.name}
-                    {/* Flecha ▾ que rota 180° cuando el dropdown está abierto
-                        la rotación se maneja con la clase "open" en el CSS */}
                     <span className={`arrow ${dropdownOpen === menu.id ? 'open' : ''}`}>▾</span>
-                  </span>
+                  </button> 
 
                 ) : (
 

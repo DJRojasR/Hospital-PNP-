@@ -40,7 +40,6 @@
 }
 
 .bbc-list li::before {
-  content: "•";
   color: var(--color-accent);
   font-weight: bold;
   position: absolute;

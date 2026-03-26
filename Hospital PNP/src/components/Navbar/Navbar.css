@@ -189,6 +189,26 @@
   padding: 4px;
 }
 
+/* botones de menú que reemplazan span (solo visual) */
+.menu-button {
+  all: unset;                /* elimina estilos por defecto de button */
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;      /* mantiene flex para alinear la flecha */
+  align-items: center;
+  gap: 4px;                  /* espacio entre texto y flecha */
+  transition: color var(--transition);
+}
+
+.menu-button:hover {
+  color: var(--color-accent);
+}
+
+
 /* ============================= */
 /*         RESPONSIVE            */
 /* ============================= */
