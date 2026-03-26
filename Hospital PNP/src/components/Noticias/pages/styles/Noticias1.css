@@ -155,6 +155,10 @@
   color: var(--color-text-muted);
 }
 
+.noticia1-mid-image:hover {
+  transform: translateY(-2px);
+}
+
 /* Media queries para responsividad */
 @media (max-width: 768px) {
   .noticia1-departments-grid {

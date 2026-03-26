@@ -82,7 +82,6 @@ const Noticia2 = () => {
 
         {/* Cita destacada */}
         <div className="bbc-quote">
-          <div className="bbc-quote-icon">"</div>
           <p className="bbc-quote-text">
             La prevención es nuestra mejor herramienta contra el cáncer de cuello uterino. Un diagnóstico oportuno 
             puede cambiar el rumbo de una vida y salvar familias enteras. Estamos comprometidos con acercar estos 

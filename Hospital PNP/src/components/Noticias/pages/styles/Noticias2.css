@@ -116,6 +116,10 @@
   color: var(--color-text-muted);
 }
 
+.noticia2-mid-image:hover {
+  transform: translateY(-2px);
+}
+
 /* Media queries para responsividad */
 @media (max-width: 768px) {
   .noticia2-services-grid {

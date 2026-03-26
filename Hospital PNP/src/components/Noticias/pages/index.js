@@ -64,12 +64,12 @@ export const noticiasMetadata = {
   },
   '5': {
     id: '5',
-    title: 'Día mundial del riñon: cuidar tus riñones es cuidar tu vida',
+    title: 'Día mundial del Riñon: Cuidar tus riñones es cuidar tu vida',
     excerpt: 'A partir de este mes el hospital ofrece consultas médicas virtuales para facilitar el acceso a la atención especializada desde cualquier punto del país.',
     imageUrl: riñon,
     date: new Date('2026-02-28'),
     category: 'Salud',
-    author: 'Urología',
+    author: 'Departamento de Nefrología',
     featured: false,
   }
 }

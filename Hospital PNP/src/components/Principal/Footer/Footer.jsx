@@ -11,7 +11,7 @@ const Footer = () => {
         <p className="footer-text">
           Copyright &copy; 2026 Hospital PNP
           <span className="footer-separator"> – </span>
-          Hospital Nacional PNP "Luis N. Sáenz". Todos los derechos reservados.
+          {' '}Hospital Nacional PNP "Luis N. Sáenz". Todos los derechos reservados.
         </p>
  
       </div>
