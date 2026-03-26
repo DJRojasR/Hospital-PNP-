@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# SonarQube
+sonar-project.properties
+.scannerwork/
+.sonarqube/
+
+# Tests y cobertura
+coverage/
+*.test.jsx
+*.test.js
+*.test.ts
+*.test.tsx
+*.spec.jsx
+*.spec.js
+src/setupTests.js
