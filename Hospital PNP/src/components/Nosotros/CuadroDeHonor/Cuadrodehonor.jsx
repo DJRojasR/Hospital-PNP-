@@ -9,6 +9,7 @@ import subdirectorsanidad from '../../../assets/subdirecsani.jpg'
 import directorhospital from '../../../assets/direchosp.jpg'
 import PropTypes from 'prop-types'
 
+
 /* ─────────────────────────────────────────
    Componente reutilizable HonorCard
    Cambia src por la ruta real de cada foto
