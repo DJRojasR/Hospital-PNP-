@@ -34,19 +34,14 @@ const App = () => {
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticia/:id" element={<NoticiaDetalle />} />
 
-<<<<<<< HEAD
-          {/* si ninguna ruta coincide muestra esto */}
-          <Route path="*" element={<h2 style={{padding:'2rem'}}>Página no encontrada</h2>} />
-        </Routes>
-      
-=======
+
         {/* si ninguna ruta coincide muestra esto */}
         <Route path="*" element={<h2 style={{padding:'2rem'}}>Página no encontrada</h2>} />
       </Routes>
 
       <Logobar />
       <Footer />
->>>>>>> main
+
     </div>
   )
 }
