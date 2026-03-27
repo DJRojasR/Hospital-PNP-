@@ -1,26 +1,9 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import './Mision.css'
-import ministerio from '../../../assets/ministeriodelinterior.png'
-import policia from '../../../assets/policiaperuana.png'
-import ministeriosa from '../../../assets/ministeriodesalud.png'
-import susalud from '../../../assets/susalud.png'
-import saludpol from '../../../assets/saludpol.png'
-import dirsapol from '../../../assets/dirsapol.png'
+import { motion } from 'framer-motion'
 import director from '../../../assets/Director.jpg'
 
-const logos = [
-  { src: ministerio, alt: 'Ministerio del Interior' },
-  { src: policia, alt: 'Policía Peruana' },
-  { src: ministeriosa, alt: 'Ministerio de Salud' },
-  { src: susalud, alt: 'SUSALUD' },
-  { src: saludpol, alt: 'Saludpol' },
-  { src: dirsapol, alt: 'DIRSAPOL' },
-]
-
 const Mision = () => {
-  const track = [...logos, ...logos] // duplicado para loop continuo
-
   
   return (
     <>
@@ -113,21 +96,7 @@ const Mision = () => {
         </div>
       </div>
     </section>
-    {/* Barra de logos institucionales */}
-      <div className="logobar">
-        <span className="logobar-label">Instituciones vinculadas</span>
-        <div className="logobar-viewport">
-          <div className="logobar-track">
-            {track.map((logo, i) => (
-              <div className="logobar-item" key={`${logo.alt}-${i}`}>
-                <img src={logo.src} alt={logo.alt} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
-    
     </>
     
   )
