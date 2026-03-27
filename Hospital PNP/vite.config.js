@@ -10,7 +10,13 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['lcov', 'text', 'clover'],
-      reportsDirectory: './coverage'
+      reportsDirectory: './coverage',
+      exclude: [
+        'src/assets/**',
+        '**/*.css',
+        '**/*.test.*',
+        'src/main.jsx',
+      ]
     }
   }
 })
