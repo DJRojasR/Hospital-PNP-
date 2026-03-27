@@ -16,25 +16,26 @@ const App = () => {
     <div className="app">
       <Navbar />
 
-      <Routes>
-        {/* ruta raíz — página de inicio */}
-        <Route path="/" element={<Principal  />} />
-        {/* /principal también muestra el Header */}
-        <Route path="/principal" element={<Principal />} />
-        {/* estas las descomenta cuando crees los componentes */}
-        <Route path="/nosotros" element={<Mision />} />
-        <Route path="/cuadro-de-honor" element={<CuadroDeHonor />} />
-        {/* <Route path="/servicios" element={<Servicios />} /> */}
-        {/* <Route path="/atencion" element={<Atencion />} /> */}
-        <Route path="/atencion" element={<Atencion />} />
-        {/* <Route path="/noticias" element={<Noticias />} /> */}
-        {/* Rutas de noticias */}
-        <Route path="/noticias" element={<Noticias />} />
-        <Route path="/noticia/:id" element={<NoticiaDetalle />} />
+        <Routes>
+          {/* ruta raíz — página de inicio */}
+          <Route path="/" element={<Principal  />} />
+          {/* /principal también muestra el Header */}
+          <Route path="/principal" element={<Principal />} />
+          {/* estas las descomenta cuando crees los componentes */}
+          <Route path="/nosotros" element={<Mision />} />
+          <Route path="/cuadro-de-honor" element={<CuadroDeHonor />} />
+          {/* <Route path="/servicios" element={<Servicios />} /> */}
+          {/* <Route path="/atencion" element={<Atencion />} /> */}
+          <Route path="/atencion" element={<Atencion />} />
+          {/* <Route path="/noticias" element={<Noticias />} /> */}
+          {/* Rutas de noticias */}
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path="/noticia/:id" element={<NoticiaDetalle />} />
 
-        {/* si ninguna ruta coincide muestra esto */}
-        <Route path="*" element={<h2 style={{padding:'2rem'}}>Página no encontrada</h2>} />
-      </Routes>
+          {/* si ninguna ruta coincide muestra esto */}
+          <Route path="*" element={<h2 style={{padding:'2rem'}}>Página no encontrada</h2>} />
+        </Routes>
+      
     </div>
   )
 }
