@@ -8,6 +8,8 @@ import Atencion from './components/Atencion/Atencion.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Principal from './components/Principal/pages/principal.jsx'
 import NoticiaDetalle from './components/Noticias/NoticiasDetalle.jsx'
+import Footer from './components/Piedepagina/Footer/Footer.jsx'
+import Logobar from './components/Piedepagina/Logobar/Logobar.jsx'
 
 
 
@@ -35,6 +37,9 @@ const App = () => {
         {/* si ninguna ruta coincide muestra esto */}
         <Route path="*" element={<h2 style={{padding:'2rem'}}>Página no encontrada</h2>} />
       </Routes>
+
+      <Logobar />
+      <Footer />
     </div>
   )
 }
