@@ -158,7 +158,7 @@ const Navbar = () => {
                         {/* Al hacer click en un subitem:
                             1. setMenuOpen(false)   → cierra el menú hamburguesa
                             2. setDropdownOpen(null) → cierra el dropdown */}
-                        <Link to={item.link} onClick={() => { setMenuOpen(false), setDropdownOpen(null) }} >
+                        <Link to={item.link} onClick={() => { setMenuOpen(false); setDropdownOpen(null) }} >
                           {item.name}
                         </Link>
                       </li>

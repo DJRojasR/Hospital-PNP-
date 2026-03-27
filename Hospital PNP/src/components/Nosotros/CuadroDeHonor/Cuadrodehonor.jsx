@@ -7,6 +7,7 @@ import comandantegeneral from '../../../assets/comandantegeneral.jpg'
 import directorsanidad from '../../../assets/directorsani.jpg'
 import subdirectorsanidad from '../../../assets/subdirecsani.jpg'
 import directorhospital from '../../../assets/direchosp.jpg'
+import PropTypes from 'prop-types'
 
 
 /* ─────────────────────────────────────────
@@ -37,22 +38,30 @@ const HonorCard = ({ src, name, role, featured = false, index = 0 }) => (
   </motion.article>
 )
 
+// Esto es lo que le falta a tu componente
+HonorCard.propTypes = {
+  src:      PropTypes.string.isRequired,
+  name:     PropTypes.string.isRequired,
+  role:     PropTypes.string.isRequired,
+  featured: PropTypes.bool,
+  index:    PropTypes.number,
+}
 /* ─────────────────────────────────────────
    Datos — reemplaza src y nombres reales
 ───────────────────────────────────────── */
 const autoridadesNacionales = [
-  { src: presidente,  name: 'José María Balcázar Zelada',           role: 'Presidente de la República' },
-  { src: ministrointerior,    name: 'Hugo Alberto Begazo de Bedoya',             role: 'Ministro del Interior' },
+  { id: 'presidente-republica',  src: presidente,       name: 'José María Balcázar Zelada',    role: 'Presidente de la República' },
+  { id: 'ministro-interior',     src: ministrointerior, name: 'Hugo Alberto Begazo de Bedoya', role: 'Ministro del Interior' },
 ]
 
 const comandanciaGeneral = [
-  { src: comandantegeneral,  name: 'Oscar Manuel Arriola Delgado',   role: 'Comandante General de la PNP' },
+  { id: 'comandante-general',    src: comandantegeneral, name: 'Oscar Manuel Arriola Delgado',  role: 'Comandante General de la PNP' },
 ]
 
 const direccionHospital = [
-  { src: directorsanidad,  name: 'Jorge Alberto Villacorta Ruiz\nGeneral Médico SPNP',            role: 'DIRECTOR DE SANIDAD POLICIAL' },
-  { src: subdirectorsanidad, name: 'Moisés Salvador Rojas Arcos\nGeneral Médico SPNP',          role: 'SUB DIRECTOR SANIDAD POLICIAL ' },
-  { src: directorhospital,       name: 'Ricardo Jesus Tinoco Tejada\nGeneral Médico SPNP',        role: 'DIRECTOR DEL HOSPITAL NACIONAL PNP «LUIS N. SÁENZ» ' },
+  { id: 'director-sanidad',      src: directorsanidad,      name: 'Jorge Alberto Villacorta Ruiz\nGeneral Médico SPNP',  role: 'DIRECTOR DE SANIDAD POLICIAL' },
+  { id: 'subdirector-sanidad',   src: subdirectorsanidad,   name: 'Moisés Salvador Rojas Arcos\nGeneral Médico SPNP',    role: 'SUB DIRECTOR SANIDAD POLICIAL' },
+  { id: 'director-hospital',     src: directorhospital,     name: 'Ricardo Jesus Tinoco Tejada\nGeneral Médico SPNP',    role: 'DIRECTOR DEL HOSPITAL NACIONAL PNP «LUIS N. SÁENZ»' },
 ]
 
 /* ─────────────────────────────────────────
@@ -70,6 +79,10 @@ const SectionHeading = ({ label }) => (
     <div className="ch-section-line" />
   </motion.div>
 )
+
+SectionHeading.propTypes = {
+  label: PropTypes.string.isRequired,
+}
 
 /* ─────────────────────────────────────────
    Página principal
@@ -111,7 +124,7 @@ const Cuadrodehonor = () => (
         <SectionHeading label="Autoridades Nacionales" />
         <div className="ch-grid ch-grid--3">
           {autoridadesNacionales.map((p, i) => (
-            <HonorCard key={i} index={i} {...p} />
+            <HonorCard key={p.id} index={i} {...p} />
           ))}
         </div>
       </section>
@@ -121,7 +134,7 @@ const Cuadrodehonor = () => (
         <SectionHeading label="Comandancia General de la Policía Nacional del Perú" />
         <div className="ch-grid ch-grid--1">
           {comandanciaGeneral.map((p, i) => (
-            <HonorCard key={i} index={i}  {...p} />
+            <HonorCard key={p.id} index={i}  {...p} />
           ))}
         </div>
       </section>
@@ -131,7 +144,7 @@ const Cuadrodehonor = () => (
         <SectionHeading label="Dirección de Sanidad Policial" />
         <div className="ch-grid ch-grid--4">
           {direccionHospital.map((p, i) => (
-            <HonorCard key={i} index={i} {...p} />
+            <HonorCard key={p.id} index={i} {...p} />
           ))}
         </div>
       </section>
