@@ -9,25 +9,23 @@ import './Logobar.css'
 
 
 const logos = [
-  { src: ministerio, alt: 'Ministerio del Interior' },
-  { src: policia, alt: 'Policía Peruana' },
-  { src: ministeriosa, alt: 'Ministerio de Salud' },
-  { src: susalud, alt: 'SUSALUD' },
-  { src: saludpol, alt: 'Saludpol' },
-  { src: dirsapol, alt: 'DIRSAPOL' },
-]
+  { id: 1, src: ministerio, alt: 'Ministerio del Interior' },
+  { id: 2, src: policia, alt: 'Policía Peruana' },
+  { id: 3, src: ministeriosa, alt: 'Ministerio de Salud' },
+  { id: 4, src: susalud, alt: 'SUSALUD' },
+  { id: 5, src: saludpol, alt: 'Saludpol' },
+  { id: 6, src: dirsapol, alt: 'DIRSAPOL' },
+];
 
 
 const Logobar = () => {
-    const track = [...logos, ...logos] // duplicado para loop continuo
-
   return (
     <div className="logobar">
       <span className="logobar-label">Instituciones vinculadas</span>
       <div className="logobar-viewport">
         <div className="logobar-track">
           {logos.map((logo, i) => (
-            <div className="logobar-item" key={i}>
+            <div className="logobar-item" key={logo.id}>
               <img src={logo.src} alt={logo.alt} />
             </div>
           ))}

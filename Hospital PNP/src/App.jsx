@@ -4,13 +4,13 @@ import './App.css'
 import CuadroDeHonor from './components/Nosotros/CuadroDeHonor/Cuadrodehonor.jsx' 
 import Mision from './components/Nosotros/Mision/Mision.jsx'
 import Noticias from './components/Noticias/Noticias.jsx'
-import Atencion from './components/Atencion/Atencion.jsx'
+import Atencion from './components/Atencion/CentrosSalud/Atencion.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Principal from './components/Principal/pages/principal.jsx'
 import NoticiaDetalle from './components/Noticias/NoticiasDetalle.jsx'
 import Footer from './components/Piedepagina/Footer/Footer.jsx'
 import Logobar from './components/Piedepagina/Logobar/Logobar.jsx'
-
+import Portal from './components/Atencion/Portalpaciente/Portal.jsx'
 
 
 const App = () => {
@@ -29,6 +29,7 @@ const App = () => {
           {/* <Route path="/servicios" element={<Servicios />} /> */}
           {/* <Route path="/atencion" element={<Atencion />} /> */}
           <Route path="/atencion" element={<Atencion />} />
+          <Route path="/portal" element={<Portal />} />
           {/* <Route path="/noticias" element={<Noticias />} /> */}
           {/* Rutas de noticias */}
           <Route path="/noticias" element={<Noticias />} />

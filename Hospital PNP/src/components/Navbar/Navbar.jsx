@@ -21,8 +21,8 @@ const NavbMenu = [
   },
   { id: 3, name: 'ATENCIÓN AL PACIENTE', link: '#',  delay: 0.2 ,
      dropdown: [
-      { id: 1, name: 'Centros de Salud',  link: '/atencion' },
-      { id: 2, name: 'Portal',  link: '/portal' }
+      { id: 1, name: 'Portal Pacientes',  link: '/portal' },
+      { id: 2, name: 'Centros de Salud',  link: '/atencion' },
     ]
   },
   { id: 4, name: 'NOTICIAS',             link: '/noticias',  delay: 0.2 },
