@@ -99,7 +99,7 @@ const Noticia5 = () => {
         
         <p>
           La jornada culminó con un momento de integración y actividad física junto a la 
-          <strong> CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '}, el equipo del Departamento de Nefrología 
+          <strong> CMDTE. S PNP Natalie Córdova Villafuerte</strong>, el equipo del Departamento de Nefrología 
           y los asistentes, con un baile dirigido por <strong>Willie Obregón</strong>{' '}, promoviendo así un estilo 
           de vida activo y saludable.
         </p>
