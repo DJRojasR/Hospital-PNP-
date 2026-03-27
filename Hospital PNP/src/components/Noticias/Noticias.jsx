@@ -126,7 +126,7 @@ NewsCard.propTypes = {
 const NewsFilter = ({ categories, activeCategory, onCategoryChange }) => (
   <div className="ns-filter">
     <span className="ns-filter-label">Filtrar por categoría</span>
-    <div className="ns-filter-pills" role="group" aria-label="Filtros de categoría">
+    <fieldset className="ns-filter-pills" aria-label="Filtros de categoría">
       {categories.map((cat) => (
         <button
           key={cat}
@@ -137,15 +137,94 @@ const NewsFilter = ({ categories, activeCategory, onCategoryChange }) => (
           {cat}
         </button>
       ))}
-    </div>
+    </fieldset>
   </div>
 )
+
+NewsFilter.propTypes = {
+  categories:       PropTypes.arrayOf(PropTypes.string).isRequired,
+  activeCategory:   PropTypes.string.isRequired,
+  onCategoryChange: PropTypes.func.isRequired,
+}
+
+// Se generan una vez cuando se carga el archivo, no en cada render
+const SKELETON_KEYS = Array.from({ length: 6 }, () => crypto.randomUUID())
+
+// Función auxiliar fuera del componente Noticias
+const renderContent = (loading, filtered, activeCategory, handleReadMore) => {
+  if (loading) {
+    return (
+      <motion.div
+        key="skeletons"
+        className="ns-grid ns-grid--regular"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        {SKELETON_KEYS.map((key) => <NewsCardSkeleton key={key} />)}
+      </motion.div>
+    )
+  }
+
+  if (filtered.length === 0) {
+    return (
+      <motion.div
+        key="empty"
+        className="ns-empty"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+      >
+        <p>No hay noticias disponibles en esta categoría.</p>
+      </motion.div>
+    )
+  }
+
+  const featured = filtered.filter((n) => n.featured)
+  const regular = filtered.filter((n) => !n.featured)
+
+  return (
+    <motion.div
+      key={activeCategory}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {featured.length > 0 && (
+        <section className="ns-section" aria-labelledby="featured-title">
+          <h2 className="ns-section-title" id="featured-title">Destacadas</h2>
+          <div className="ns-grid ns-grid--featured">
+            {featured.map((n, i) => (
+              <NewsCard key={n.id} index={i} {...n} onReadMore={handleReadMore} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {regular.length > 0 && (
+        <section className="ns-section" aria-labelledby="regular-title">
+          <h2 className="ns-section-title" id="regular-title">Últimas noticias</h2>
+          <div className="ns-grid ns-grid--regular">
+            {regular.map((n, i) => (
+              <NewsCard key={n.id} index={i} {...n} onReadMore={handleReadMore} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="ns-load-more">
+        <button className="ns-btn-more">Cargar más noticias</button>
+      </div>
+    </motion.div>
+  )
+}
 
 // Página principal modificada
 const Noticias = () => {
   const [activeCategory, setActiveCategory] = useState('Todas')
   const [loading, setLoading] = useState(false)
-  const navigate = useNavigate() // 👈 Hook de navegación
+  const navigate = useNavigate()
 
   const handleCategoryChange = (cat) => {
     if (cat === activeCategory) return
@@ -155,19 +234,15 @@ const Noticias = () => {
   }
 
   const handleReadMore = (newsId) => {
-    navigate(`/noticia/${newsId}`) // 👈 Navegar al detalle
+    navigate(`/noticia/${newsId}`)
   }
 
   const filtered = activeCategory === 'Todas'
-    ? noticiasArray  // 👈 Usar noticiasArray en lugar de newsData
+    ? noticiasArray
     : noticiasArray.filter((n) => n.category === activeCategory)
-
-  const featured = filtered.filter((n) => n.featured)
-  const regular = filtered.filter((n) => !n.featured)
 
   return (
     <div className="ns-page">
-      {/* Hero Section - igual */}
       <motion.section
         className="ns-hero"
         initial={{ opacity: 0 }}
@@ -181,7 +256,6 @@ const Noticias = () => {
         <p className="ns-hero-sub">Mantente informado sobre las últimas novedades institucionales y de salud</p>
       </motion.section>
 
-      {/* Contenido principal */}
       <main className="ns-main">
         <NewsFilter
           categories={CATEGORIES}
@@ -189,75 +263,9 @@ const Noticias = () => {
           onCategoryChange={handleCategoryChange}
         />
 
+        {/* ✅ Sin ternarios anidados */}
         <AnimatePresence mode="wait">
-          {loading ? (
-            <motion.div
-              key="skeletons"
-              className="ns-grid ns-grid--regular"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              {Array.from({ length: 6 }).map((_, i) => <NewsCardSkeleton key={i} />)}
-            </motion.div>
-          ) : filtered.length === 0 ? (
-            <motion.div
-              key="empty"
-              className="ns-empty"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-            >
-              <p>No hay noticias disponibles en esta categoría.</p>
-            </motion.div>
-          ) : (
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Noticias destacadas */}
-              {featured.length > 0 && (
-                <section className="ns-section" aria-labelledby="featured-title">
-                  <h2 className="ns-section-title" id="featured-title">Destacadas</h2>
-                  <div className="ns-grid ns-grid--featured">
-                    {featured.map((n, i) => (
-                      <NewsCard 
-                        key={n.id} 
-                        index={i} 
-                        {...n} 
-                        onReadMore={handleReadMore} // 👈 Pasar función
-                      />
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Noticias regulares */}
-              {regular.length > 0 && (
-                <section className="ns-section" aria-labelledby="regular-title">
-                  <h2 className="ns-section-title" id="regular-title">Últimas noticias</h2>
-                  <div className="ns-grid ns-grid--regular">
-                    {regular.map((n, i) => (
-                      <NewsCard 
-                        key={n.id} 
-                        index={i} 
-                        {...n} 
-                        onReadMore={handleReadMore} // 👈 Pasar función
-                      />
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Cargar más */}
-              <div className="ns-load-more">
-                <button className="ns-btn-more">Cargar más noticias</button>
-              </div>
-            </motion.div>
-          )}
+          {renderContent(loading, filtered, activeCategory, handleReadMore)}
         </AnimatePresence>
       </main>
     </div>
