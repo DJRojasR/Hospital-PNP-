@@ -158,6 +158,10 @@ a.contacto-valor:hover {
 /* ============================= */
 
 @media (max-width: 768px) {
+  .contacto-fila {
+    flex-direction: column;  /* ← agrega esto */
+  }
+  
   .contacto-titulo {
     font-size: var(--text-xl);
   }
