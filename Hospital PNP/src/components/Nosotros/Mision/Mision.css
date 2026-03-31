@@ -178,7 +178,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-12);
-  padding-top: var(--space-12); /* 👈 agrega esto */
+  padding: var(--space-12); /* agrega esto */
 }
 
 /* ============================= */
@@ -186,8 +186,8 @@
 /* ============================= */
 
 .foto-director {
-  width: 280px;
-  height: 340px;
+  width: 460px;
+  height: 460px;
   object-fit: cover;        /* recorta la foto sin deformarla */
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
@@ -238,47 +238,41 @@
   line-height: 1.8 !important;
 }
 
+
 /* ============================= */
 /*         RESPONSIVE            */
 /* ============================= */
 
 @media (max-width: 768px) {
-  /* en móvil se apilan verticalmente — foto arriba, texto abajo */
   .director-container {
     flex-direction: column;
+    align-items: center;    /* ← centra todo */
     gap: var(--space-8);
+    padding: var(--space-8) 6%;  /* ← padding lateral */
   }
 
   .foto-director {
-    width: 300px;
+    width: 100%;            /* ← ocupa el ancho disponible */
+    max-width: 320px;       /* ← pero no más de esto */
     height: 300px;
   }
 
+  .director-descripcion {
+    width: 100%;            /* ← texto ocupa todo el ancho */
+    text-align: left;
+  }
+  
   .director-titulo {
     font-size: var(--text-xl);
+    text-align: left;
   }
-}
 
-/* ============================= */
-/*         RESPONSIVE            */
-/* ============================= */
-
-@media (max-width: 768px) {
-  .mv-section {
-    padding: var(--space-10, 2.5rem) 6%;
+  .director-descripcion p {
+    text-align: left;       /* ← evita justify roto en móvil */
   }
 
   .mv-grid {
     grid-template-columns: 1fr;
   }
 
-  .mv-divider {
-    width: 185px;
-  }
-
-  .mv-title {
-    font-size: var(--text-xl);
-  }
-
-  
 }
