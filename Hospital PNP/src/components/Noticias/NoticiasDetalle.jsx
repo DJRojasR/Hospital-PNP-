@@ -2,11 +2,15 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getNoticiaById } from './pages/index'
 import './NoticiasDetalle.css'
-import React from 'react'
+import React, {useEffect} from 'react'
  
 const NoticiasDetalle = () => {
   const { id } = useParams()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant'})
+  }, [id])
   
   const noticia = getNoticiaById(id)
   
