@@ -51,7 +51,7 @@ const NoticiasDetalle = () => {
     >
       <article className="nd-article">
         {/* Botón volver */}
-        <button onClick={() => navigate(-1)} className="nd-back-button">
+        <button onClick={() => navigate('/noticias')} className="nd-back-button">
           ← Volver
         </button>
 
