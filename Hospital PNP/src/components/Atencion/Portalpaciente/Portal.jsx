@@ -1,6 +1,7 @@
 import React from 'react'
 import './Portal.css'
 import { MdImageSearch, MdAssignment, MdCalendarMonth } from 'react-icons/md'
+import { motion } from 'framer-motion'
 
 const features = [
   {
@@ -28,28 +29,52 @@ const Portal = () => {
     <section className="prox-section">
       <div className="prox-container">
 
-        <div className="prox-badge">Próximamente</div>
+        {/* Animación del header */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="prox-badge">Próximamente</div>
 
-        <h2 className="prox-titulo">Nuevas funciones en camino</h2>
-        <p className="prox-subtitulo">
-          Estamos trabajando para brindarte una experiencia digital completa.
-          Muy pronto podrás acceder a:
-        </p>
+          <h2 className="prox-titulo">Nuevas funciones en camino</h2>
+          <p className="prox-subtitulo">
+            Estamos trabajando para brindarte una experiencia digital completa.
+            Muy pronto podrás acceder a:
+          </p>
+        </motion.div>
 
+        {/* Cards animadas */}
         <div className="prox-cards">
-          {features.map((f, i) => (
-            <div className="prox-card" key={f.id}>
+          {features.map((f, index) => (
+            <motion.div
+              className="prox-card"
+              key={f.id}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.5,
+                ease: 'easeOut'
+              }}
+            >
               <div className="prox-card-icon">{f.icon}</div>
               <h3 className="prox-card-titulo">{f.titulo}</h3>
               <p className="prox-card-desc">{f.descripcion}</p>
               <span className="prox-card-tag">En desarrollo</span>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="prox-footer-note">
+        {/* Footer animado */}
+        <motion.div
+          className="prox-footer-note"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           🔔 Esta funcionalidad estará disponible próximamente para pacientes del Hospital Nacional PNP "Luis N. Sáenz".
-        </div>
+        </motion.div>
 
       </div>
     </section>

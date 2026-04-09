@@ -77,7 +77,12 @@
   transition: filter 0.3s ease;
 }
  
-.logobar-item img:hover {
+.logobar-item a {
+  display: flex;
+  cursor: pointer;
+}
+
+.logobar-item a:hover img {
   filter: grayscale(0%) opacity(1);
 }
 

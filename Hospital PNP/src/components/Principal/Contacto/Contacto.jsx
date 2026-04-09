@@ -17,7 +17,7 @@ const contactoData = [
     icono: <MdPhone size={22} />,
     label: 'Teléfono',
     valor: '(01) 510 3500',
-    link: 'tel:+51011234567',
+    link: null,
   },
   {
     id: 3,

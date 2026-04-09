@@ -11,7 +11,7 @@ const Noticia5 = () => {
       {/* Introducción destacada */}
       <div className="bbc-intro-block">
         <p className="bbc-intro-text">
-          💜 <strong>DÍA MUNDIAL DEL RIÑÓN: CUIDAR TUS RIÑONES ES CUIDAR TU VIDA</strong>{' '} 💜
+          💜 <strong>DÍA MUNDIAL DEL RIÑÓN: CUIDAR TUS RIÑONES ES CUIDAR TU VIDA</strong> 💜
         </p>
         <p className="bbc-intro-sub">
           El Departamento de Nefrología del Hospital Nacional PNP Luis N. Sáenz realizó una jornada de concientización 
@@ -44,9 +44,8 @@ const Noticia5 = () => {
         <h2 className="bbc-section-title">Jornada de concientización por la salud renal</h2>
         
         <p className="bbc-first-paragraph">
-          En el marco del <strong>Día Mundial del Riñón</strong>{' '}, que se conmemora cada segundo jueves de marzo, 
-          el <strong>Departamento de Nefrología</strong>{' '} del Hospital Nacional PNP Luis N. Sáenz, a cargo de la 
-          <strong> CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '}, realizó una jornada de concientización orientada 
+          En el marco del <strong>Día Mundial del Riñón</strong>, que se conmemora cada segundo jueves de marzo, 
+          el <strong>Departamento de Nefrología</strong> del Hospital Nacional PNP Luis N. Sáenz, a cargo de la <strong> CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '}, realizó una jornada de concientización orientada 
           a promover el cuidado de la salud renal y la prevención de enfermedades que muchas veces se detectan cuando 
           ya están en etapas avanzadas.
         </p>
@@ -58,14 +57,14 @@ const Noticia5 = () => {
             y realizar chequeos médicos periódicos, especialmente en personas con factores de riesgo.
           </p>
           <footer className="bbc-quote-footer">
-            — <strong>CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '}, Jefa del Departamento de Nefrología
+            — <strong>CMDTE. S PNP Natalie Córdova Villafuerte</strong>, Jefa del Departamento de Nefrología
           </footer>
         </div>
 
         <h2 className="bbc-section-title">Ocho reglas para cuidar tus riñones</h2>
         
         <p>
-          Durante la actividad, la <strong>CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '} destacó que la prevención 
+          Durante la actividad, la <strong>CMDTE. S PNP Natalie Córdova Villafuerte</strong> destacó que la prevención 
           es fundamental, recomendando seguir las ocho reglas de cuidado del riñón:
         </p>
 
@@ -86,7 +85,7 @@ const Noticia5 = () => {
         <h2 className="bbc-section-title">Campaña de concientización integral</h2>
         
         <p>
-          Asimismo, el <strong>Servicio de Hemodiálisis</strong>{' '} del Departamento de Nefrología desarrolló una 
+          Asimismo, el <strong>Servicio de Hemodiálisis</strong> del Departamento de Nefrología desarrolló una 
           campaña de concientización dirigida a pacientes y al público en general, con la participación de especialistas 
           en nefrología, psicología y nutrición, quienes brindaron.
         </p>
@@ -98,6 +97,7 @@ const Noticia5 = () => {
         <h2 className="bbc-section-title">Integración y estilo de vida activo</h2>
         
         <p>
+
           La jornada culminó con un momento de integración y actividad física junto a la <strong>CMDTE. S PNP Natalie Córdova Villafuerte</strong>{' '}
           , el equipo del Departamento de Nefrología 
           y los asistentes, con un baile dirigido por <strong>Willie Obregón</strong>{' '}, promoviendo así un estilo 
@@ -121,7 +121,7 @@ const Noticia5 = () => {
         <h2 className="bbc-section-title">Compromiso con la salud de la familia policial</h2>
         
         <p>
-          De esta manera, el <strong>Hospital Nacional PNP Luis N. Sáenz</strong>{' '} reafirma su compromiso con 
+          De esta manera, el <strong>Hospital Nacional PNP Luis N. Sáenz</strong> reafirma su compromiso con 
           la prevención y el cuidado de la salud de toda la familia policial, promoviendo espacios de educación, 
           concientización y atención integral que contribuyen al bienestar de quienes dedican su vida al servicio del país.
         </p>
